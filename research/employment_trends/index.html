@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="Observatorio digital sobre la transformación del mercado laboral de la ingeniería en México, 2026–2030.">
+    <meta name="author" content="Sidhartha Manríquez González">
+    <meta property="og:title" content="Ingeniería & Futuro del Trabajo — México 2026–2030">
+    <meta property="og:description"
+          content="Investigación digital sobre demanda, empleabilidad, tecnologías y competencias de la ingeniería en México.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/figures/fig_15_p21.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --ink: #071321;
+            --navy: #0b1b2e;
+            --blue: #1656a6;
+            --cyan: #0b9eb8;
+            --muted: #667085;
+            --line: #dfe5ec;
+            --paper: #f5f8fb;
+            --white: #fff;
+            --max: 1240px;
+            --r: 18px;
+            --shadow: 0 18px 55px rgba(13, 35, 65, .10)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.6
+        }
+
+        a {
+            color: inherit
+        }
+
+        .top {
+            height: 5px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan))
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: auto;
+            padding: 0 28px
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, .96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .navin {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .brand {
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: -.04em
+        }
+
+        .brand span {
+            color: var(--blue)
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 13px;
+            color: #475467
+        }
+
+        .navlinks a {
+            text-decoration: none
+        }
+
+        .navlinks a:hover {
+            color: var(--blue)
+        }
+
+        .hero {
+            padding: 88px 0 72px;
+            background: radial-gradient(circle at 85% 15%, rgba(22, 86, 166, .15), transparent 32%), linear-gradient(180deg, #f4f9ff, #fff 82%);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .eyebrow, .kicker {
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        .eyebrow:before {
+            content: "";
+            display: inline-block;
+            width: 27px;
+            height: 2px;
+            background: var(--cyan);
+            vertical-align: middle;
+            margin-right: 9px
+        }
+
+        h1 {
+            font-size: clamp(46px, 6.8vw, 84px);
+            line-height: .95;
+            letter-spacing: -.065em;
+            max-width: 1100px;
+            margin: 18px 0 25px
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--blue)
+        }
+
+        h2 {
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -.045em;
+            margin: 7px 0 0
+        }
+
+        h3 {
+            line-height: 1.2
+        }
+
+        .lead {
+            max-width: 900px;
+            font-size: 20px;
+            color: #475467
+        }
+
+        .meta, .actions, .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .meta {
+            margin: 26px 0
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 999px;
+            padding: 7px 12px;
+            font-size: 12px;
+            color: #667085
+        }
+
+        .actions {
+            margin-top: 26px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 17px;
+            border-radius: 10px;
+            border: 1px solid var(--blue);
+            font-size: 14px;
+            font-weight: 850;
+            text-decoration: none
+        }
+
+        .primary {
+            background: var(--blue);
+            color: #fff
+        }
+
+        .secondary {
+            background: #fff;
+            color: var(--blue)
+        }
+
+        section {
+            padding: 76px 0
+        }
+
+        .dark {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .soft {
+            background: var(--paper)
+        }
+
+        .sectionhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 35px;
+            margin-bottom: 30px
+        }
+
+        .sectionhead p {
+            max-width: 560px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .dark .sectionhead p {
+            color: #b9c6d7
+        }
+
+        .statement {
+            font-size: 29px;
+            line-height: 1.3;
+            max-width: 980px;
+            color: #dce7f5;
+            margin: 22px 0 0
+        }
+
+        .statement strong {
+            color: #fff
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .card, .panel, .figure {
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            background: #fff;
+            padding: 23px
+        }
+
+        .shadow {
+            box-shadow: var(--shadow)
+        }
+
+        .number {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -.05em;
+            color: var(--blue)
+        }
+
+        .small, .legend {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .card h3 {
+            font-size: 15px;
+            margin: 13px 0 0
+        }
+
+        .twocol {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 22px
+        }
+
+        .three {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .quote {
+            border-left: 4px solid var(--blue);
+            padding: 17px 20px;
+            background: #f5f8fd;
+            border-radius: 0 12px 12px 0;
+            font-size: 19px
+        }
+
+        .prose {
+            max-width: 930px;
+            font-size: 16px
+        }
+
+        .prose h2 {
+            margin-top: 55px
+        }
+
+        .prose p {
+            margin: 14px 0
+        }
+
+        .prose li {
+            margin: 7px 0
+        }
+
+        .figure {
+            padding: 14px;
+            overflow: hidden
+        }
+
+        .figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 11px
+        }
+
+        .caption {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 9px 3px 0
+        }
+
+        .gridfig {
+            display: grid;
+            grid-template-columns:repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .chart {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns:200px 1fr 72px;
+            gap: 12px;
+            align-items: center;
+            font-size: 13px
+        }
+
+        .track {
+            height: 11px;
+            background: #edf1f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            border-radius: 20px
+        }
+
+        .row b {
+            text-align: right
+        }
+
+        .bar2 {
+            height: 9px;
+            background: #eef2f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .bar2 span {
+            display: block;
+            height: 100%;
+            background: var(--blue)
+        }
+
+        .tablewrap {
+            overflow: auto;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: var(--shadow)
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 980px;
+            font-size: 13px
+        }
+
+        th, td {
+            padding: 13px 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            white-space: nowrap
+        }
+
+        th {
+            background: #f4f7fa;
+            color: #344054;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            position: sticky;
+            top: 0;
+            z-index: 2
+        }
+
+        tbody tr:hover {
+            background: #f8fbff
+        }
+
+        .rank {
+            font-weight: 900;
+            color: var(--blue)
+        }
+
+        .source-note {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 10px
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0
+        }
+
+        .controls input, .controls select {
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 10px 12px;
+            font: inherit;
+            background: #fff
+        }
+
+        .score {
+            font-weight: 850
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            grid-template-columns:repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 28px
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 5%;
+            right: 5%;
+            top: 20px;
+            height: 2px;
+            background: #cbd5e1
+        }
+
+        .time {
+            position: relative;
+            padding-top: 42px
+        }
+
+        .dot {
+            position: absolute;
+            top: 14px;
+            left: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--blue);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 1px var(--blue)
+        }
+
+        .time h3 {
+            font-size: 15px;
+            margin: 8px 0
+        }
+
+        .time p {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .explorer {
+            display: grid;
+            grid-template-columns:260px 1fr;
+            gap: 18px
+        }
+
+        .tabs {
+            display: grid;
+            gap: 7px
+        }
+
+        .tab {
+            border: 1px solid #2a3b53;
+            background: #101f33;
+            color: #dce6f5;
+            border-radius: 10px;
+            padding: 11px 13px;
+            text-align: left;
+            font-weight: 750;
+            font-size: 13px;
+            cursor: pointer
+        }
+
+        .tab.active {
+            background: #173d76;
+            border-color: #2f68ae;
+            color: #fff
+        }
+
+        .profile {
+            border: 1px solid #2a3951;
+            border-radius: 18px;
+            background: #101f33;
+            padding: 25px
+        }
+
+        .profile h3 {
+            margin: 0;
+            font-size: 24px
+        }
+
+        .profile .desc {
+            color: #b9c6d7;
+            font-size: 14px
+        }
+
+        .profile h4 {
+            margin-bottom: 5px
+        }
+
+        .tag {
+            padding: 6px 9px;
+            border-radius: 7px;
+            background: #edf4ff;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 850
+        }
+
+        .method {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 13px
+        }
+
+        .method .card {
+            min-height: 155px
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 8px;
+            border-radius: 7px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            background: #eef5ff;
+            color: var(--blue)
+        }
+
+        .badge.green {
+            background: #edf9f5;
+            color: #16745c
+        }
+
+        .badge.gold {
+            background: #fff7e8;
+            color: #9b6500
+        }
+
+        .badge.gray {
+            background: #f0f2f5;
+            color: #475467
+        }
+
+        .audit {
+            background: #fff8eb;
+            border: 1px solid #f0d8a3;
+            border-radius: 14px;
+            padding: 16px;
+            color: #694c00
+        }
+
+        footer {
+            background: #071321;
+            color: #aeb9ca;
+            padding: 42px 0
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .foot b {
+            color: #fff
+        }
+
+        .foot p {
+            font-size: 12px;
+            max-width: 720px;
+            margin: 0
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .links a {
+            color: #dce6f5;
+            text-decoration: none;
+            font-size: 12px
+        }
+
+        @media (max-width: 950px) {
+            .navlinks {
+                display: none
+            }
+
+            .cards, .method {
+                grid-template-columns:1fr 1fr
+            }
+
+            .twocol, .three, .gridfig {
+                grid-template-columns:1fr
+            }
+
+            .explorer {
+                grid-template-columns:1fr
+            }
+
+            .timeline {
+                grid-template-columns:1fr 1fr
+            }
+
+            .timeline:before {
+                display: none
+            }
+
+            .sectionhead {
+                display: block
+            }
+
+            .sectionhead p {
+                margin-top: 14px
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 18px
+            }
+
+            .hero {
+                padding: 62px 0
+            }
+
+            .cards, .method {
+                grid-template-columns:1fr
+            }
+
+            h2 {
+                font-size: 31px
+            }
+
+            .statement {
+                font-size: 22px
+            }
+
+            .lead {
+                font-size: 17px
+            }
+
+            .row {
+                grid-template-columns:130px 1fr 54px
+            }
+
+            section {
+                padding: 55px 0
+            }
+
+            .foot {
+                display: block
+            }
+
+            .foot p {
+                margin-top: 16px
+            }
+        }
+
+
+        /* Interactive research figures */
+        .figure {
+            position: relative;
+        }
+
+        .figure img {
+            cursor: zoom-in;
+            transition: transform .22s ease, box-shadow .22s ease;
+        }
+
+        .figure:hover img {
+            box-shadow: 0 14px 34px rgba(13, 35, 65, .14);
+        }
+
+        .figure:has(img[onclick])::after {
+            content: "↗";
+            position: absolute;
+            right: 22px;
+            top: 22px;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(7, 19, 33, .78);
+            color: #fff;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity .2s ease, transform .2s ease;
+            pointer-events: none;
+        }
+
+        .figure:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            background: rgba(4, 12, 24, .88);
+            backdrop-filter: blur(8px);
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: min(96vw, 1500px);
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, .45);
+            background: #fff;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 18px;
+            right: 22px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, .28);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .12);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .lightbox-title {
+            position: fixed;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            max-width: 90vw;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(7, 19, 33, .78);
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .lightbox {
+                padding: 14px
+            }
+
+            .lightbox img {
+                max-width: 96vw;
+                max-height: 82vh
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px
+            }
+
+            .lightbox-title {
+                bottom: 10px;
+                font-size: 12px
+            }
+        }
+    </style>
+    <title>Ingeniería & Futuro del Trabajo — México 2026–2030</title></head>
+<body>
+<div class="top"></div>
+<nav>
+    <div class="container navin">
+        <a class="brand" href="./index.html" aria-label="Ir al inicio">Ingeniería <span>&amp;</span> Futuro del Trabajo</a>
+        <div class="navlinks" aria-label="Navegación principal">
+            <a href="./index.html">Inicio</a>
+            <a href="research.html">Investigación</a>
+            <a href="dashboard.html">Datos</a>
+            <a href="engineer2030.html">Ingeniero 2030</a>
+            <a href="research.html#demanda">Demanda</a>
+            <a href="research.html#competencias">Competencias</a>
+            <a href="methodology.html">Metodología</a>
+            <a href="references.html">Fuentes</a>
+        </div>
+    </div>
+</nav>
+<header class="hero">
+    <div class="container">
+        <div class="eyebrow">Observatorio digital · Investigación 2026–2030</div>
+        <h1>La transformación del mercado laboral de la <em>ingeniería</em></h1>
+        <p class="lead">Una investigación sobre demanda laboral, empleabilidad, tecnologías emergentes y nuevas
+            competencias profesionales en México frente a la inteligencia artificial y la transformación industrial.</p>
+        <div class="actions"><a class="btn primary" href="research.html">Leer la investigación</a><a
+                class="btn secondary" href="dashboard.html">Explorar datos</a></div>
+        <div class="meta"><span class="pill">México</span><span class="pill">2026–2030</span><span class="pill">IMCO · WEF · BLS · PwC</span><span
+                class="pill">Publicación digital</span></div>
+    </div>
+</header>
+<section class="dark">
+    <div class="container">
+        <div class="kicker">Tesis central</div>
+        <h2>La ingeniería no está desapareciendo. Está cambiando.</h2>
+        <p class="statement">El cambio no consiste únicamente en sustituir una ingeniería por otra, sino en transformar
+            el conjunto de <strong>competencias que acompaña al título de ingeniería.</strong></p></div>
+</section>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">México 2026</div>
+                <h2>El mercado combina alta ocupación con una vinculación desigual</h2></div>
+            <p>Los datos de la investigación muestran por qué no basta con observar una sola métrica para evaluar una
+                ingeniería.</p></div>
+        <div class="cards">
+            <div class="card">
+                <div class="number">97.5%</div>
+                <div class="small">ocupación</div>
+                <h3>Mecánica</h3></div>
+            <div class="card">
+                <div class="number">97.2%</div>
+                <div class="small">ocupación</div>
+                <h3>Electricidad / Energía</h3></div>
+            <div class="card">
+                <div class="number">96.8%</div>
+                <div class="small">ocupación</div>
+                <h3>Software</h3></div>
+            <div class="card">
+                <div class="number">96.7%</div>
+                <div class="small">ocupación</div>
+                <h3>Electrónica / Automatización</h3></div>
+        </div>
+        <div class="actions"><a class="btn secondary" href="dashboard.html">Ver tabla maestra de indicadores →</a>
+        </div>
+    </div>
+</section>
+<section class="soft">
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">Tres dimensiones</div>
+                <h2>Demanda actual, estructural y futura</h2></div>
+            <p>La investigación propone separar las dimensiones para evitar confundir empleabilidad, tamaño de mercado y
+                crecimiento.</p></div>
+        <div class="three">
+            <div class="card">
+                <div class="number">A</div>
+                <h3>Demanda actual</h3>
+                <p class="small">Ocupación, desempleo, informalidad, empleo de calidad y vinculación.</p></div>
+            <div class="card">
+                <div class="number">B</div>
+                <h3>Demanda estructural</h3>
+                <p class="small">Sectores donde trabajan actualmente los profesionistas y dónde se concentra la
+                    actividad.</p></div>
+            <div class="card">
+                <div class="number">C</div>
+                <h3>Demanda futura</h3>
+                <p class="small">IA, automatización, manufactura avanzada, nearshoring, semiconductores, energía y
+                    datos.</p></div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">2026 → 2030</div>
+                <h2>De la ingeniería tradicional al ingeniero aumentado</h2></div>
+            <p>Una síntesis visual del argumento central del estudio.</p></div>
+        <div class="timeline">
+            <div class="time">
+                <div class="dot"></div>
+                <h3>Ingeniería</h3>
+                <p>Fundamentos técnicos y conocimiento especializado.</p></div>
+            <div class="time">
+                <div class="dot"></div>
+                <h3>Digitalización</h3>
+                <p>Datos, software, cloud y conectividad.</p></div>
+            <div class="time">
+                <div class="dot"></div>
+                <h3>IA</h3>
+                <p>Asistencia, predicción, automatización de tareas y decisión.</p></div>
+            <div class="time">
+                <div class="dot"></div>
+                <h3>Automatización</h3>
+                <p>Robótica, control, sensores y manufactura avanzada.</p></div>
+            <div class="time">
+                <div class="dot"></div>
+                <h3>Ingeniero aumentado</h3>
+                <p>Integra especialidad, tecnología y conocimiento del sector.</p></div>
+        </div>
+    </div>
+</section>
+<section class="dark">
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">Perfil profesional</div>
+                <h2>¿Qué tipo de ingeniero necesita México?</h2></div>
+            <p>Explora la combinación de especialidad, puestos, tecnologías y sectores.</p></div>
+        <div class="explorer">
+            <div class="tabs">
+                <button class="tab active" data-area="industrial">Industrial</button>
+                <button class="tab" data-area="software">Software / Sistemas</button>
+                <button class="tab" data-area="datos">Datos / IA</button>
+                <button class="tab" data-area="electronica">Electrónica / Automatización</button>
+                <button class="tab" data-area="mecanica">Mecánica / Robótica</button>
+                <button class="tab" data-area="energia">Electricidad / Energía</button>
+            </div>
+            <div class="profile" id="profile"></div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">Panorama Laboral</div>
+                <h2>Comparación de las principales carreras de ingeniería</h2></div>
+            <p>Capacidad de mantener y progresar en la carrera profesional a lo largo del tiempo</p></div>
+        <div class="twocol">
+            <div class="figure"><img src="assets/figures/investigacion-15.webp"
+                                     alt="Consolidado de Ingeniería en México 2026"></div>
+            <div class="figure"><img src="assets/figures/investigacion-16.webp"
+                                     alt="Empleabilidad en áreas de ingeniería en México"></div>
+        </div>
+        <div class="actions"><a class="btn primary" href="research.html">Ver la investigación completa →</a></div>
+    </div>
+</section>
+<section class="soft">
+    <div class="container">
+        <div class="quote"><strong>Ingeniería técnica + datos + programación + IA + automatización + conocimiento del
+            sector</strong><br><span class="small">La ventaja profesional no está únicamente en el título, sino en la capacidad de integrar capacidades para resolver problemas.</span>
+        </div>
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gráfico ampliado">
+    <button class="lightbox-close" type="button" aria-label="Cerrar gráfico">×</button>
+    <img id="lightboxImage" alt="">
+    <div class="lightbox-title" id="lightboxTitle"></div>
+</div>
+<script>
+    (function () {
+        const box = document.getElementById('lightbox');
+        const out = document.getElementById('lightboxImage');
+        const title = document.getElementById('lightboxTitle');
+        if (!box || !out) return;
+        document.querySelectorAll('.figure img').forEach(img => {
+            img.setAttribute('tabindex', '0');
+            img.setAttribute('role', 'button');
+            img.setAttribute('aria-label', 'Ampliar gráfico: ' + (img.alt || 'gráfico'));
+            const open = () => {
+                out.src = img.currentSrc || img.src;
+                out.alt = img.alt || 'Gráfico ampliado';
+                title.textContent = img.alt || 'Gráfico de la investigación';
+                box.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            };
+            img.addEventListener('click', open);
+            img.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    open();
+                }
+            });
+        });
+        const close = () => {
+            box.classList.remove('open');
+            out.removeAttribute('src');
+            document.body.style.overflow = '';
+        };
+        box.addEventListener('click', e => {
+            if (e.target === box) close();
+        });
+        box.querySelector('.lightbox-close').addEventListener('click', close);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && box.classList.contains('open')) close();
+        });
+    })();
+</script>
+<footer>
+    <div class="container foot">
+        <div><b>Ingeniería & Futuro del Trabajo</b>
+            <div>México · 2026–2030</div>
+        </div>
+        <div><p>Investigación de <strong>Sidhartha Manríquez González</strong>. <br> Investigación y análisis de datos
+            provenientes de IMCO, PwC y WEF, complementados con análisis propio.<br> Las cifras conservan el contexto y
+            las referencias de sus fuentes originales.</p>
+            <div class="links"><a href="research.html">Investigación</a><a href="dashboard.html">Datos</a><a
+                    href="engineer2030.html">Ingeniero 2030</a><a href="methodology.html">Metodología</a><a
+                    href="references.html">Fuentes</a></div>
+        </div>
+    </div>
+</footer>
+<script>const data = {
+    industrial: {
+        title: "Ingeniería Industrial",
+        desc: "Una de las áreas con mayor volumen de profesionistas y una fuerte presencia en manufactura. Su transformación se vincula con datos, IA, automatización y Operations Research.",
+        jobs: ["Industrial Engineer", "Process Engineer", "Operations Engineer", "Supply Chain Engineer", "Manufacturing Engineer", "Automation Engineer", "Operations Research Analyst"],
+        tech: ["Python", "SQL", "Data Analytics", "IA", "Automatización", "Simulación", "Optimización"],
+        sector: "Manufactura · logística · operaciones · supply chain"
+    },
+    software: {
+        title: "Software / Sistemas",
+        desc: "Área de alta ocupación y fuerte expansión tecnológica. El software se integra con cloud, datos, IA, plataformas y ciberseguridad.",
+        jobs: ["Software Engineer", "Backend Engineer", "Full-Stack Engineer", "Cloud Engineer", "DevOps Engineer", "Platform Engineer", "Systems Engineer"],
+        tech: ["Python", "Cloud", "DevOps", "APIs", "Datos", "IA", "Ciberseguridad"],
+        sector: "Tecnología · servicios · manufactura · comercio · comunicaciones"
+    },
+    datos: {
+        title: "Datos / Inteligencia Artificial",
+        desc: "La investigación identifica datos e IA como uno de los bloques de demanda emergente y de mayor especialización.",
+        jobs: ["Data Engineer", "Data Scientist", "Machine Learning Engineer", "AI Engineer", "Analytics Engineer", "MLOps Engineer"],
+        tech: ["Python", "SQL", "Machine Learning", "IA", "MLOps", "Big Data", "Modelos"],
+        sector: "Tecnología · finanzas · manufactura · servicios · analítica"
+    },
+    electronica: {
+        title: "Electrónica / Automatización",
+        desc: "Conecta electrónica, control, sensores, hardware y automatización con manufactura avanzada y semiconductores.",
+        jobs: ["Electronics Engineer", "Controls Engineer", "Automation Engineer", "Hardware Engineer", "Embedded Systems Engineer", "Semiconductor Engineer"],
+        tech: ["Embedded", "Control", "PLC", "Sensores", "Hardware", "Testing", "Semiconductores"],
+        sector: "Automotriz · electrónica · manufactura · semiconductores"
+    },
+    mecanica: {
+        title: "Mecánica / Robótica",
+        desc: "La ingeniería mecánica mantiene una alta ocupación y se transforma mediante CAD/CAE, simulación, robótica, automatización y confiabilidad.",
+        jobs: ["Mechanical Engineer", "Manufacturing Engineer", "Robotics Engineer", "Controls Engineer", "Mechatronics Engineer", "Reliability Engineer"],
+        tech: ["CAD/CAE", "Simulación", "Robótica", "Automatización", "Control", "Impresión 3D"],
+        sector: "Manufactura · automotriz · robótica · maquinaria"
+    },
+    energia: {
+        title: "Electricidad / Energía",
+        desc: "Integra sistemas eléctricos, redes, electrificación, renovables, almacenamiento y eficiencia energética.",
+        jobs: ["Electrical Engineer", "Power Systems Engineer", "Renewable Energy Engineer", "Battery Engineer", "Solar Engineer", "Energy Engineer"],
+        tech: ["Power Systems", "Redes", "Baterías", "Solar", "Eólica", "Electrificación"],
+        sector: "Energía · infraestructura · manufactura · transición energética"
+    }
+};
+
+function render(k) {
+    const d = data[k];
+    document.getElementById('profile').innerHTML = '<h3>' + d.title + '</h3><p class="desc">' + d.desc + '</p><h4>Puestos asociados</h4><div class="tags">' + d.jobs.map(x => '<span class="tag">' + x + '</span>').join('') + '</div><h4>Tecnologías / habilidades</h4><div class="tags">' + d.tech.map(x => '<span class="tag">' + x + '</span>').join('') + '</div><h4>Sectores</h4><p class="desc">' + d.sector + '</p>';
+    document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.area === k))
+}
+
+document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => render(b.dataset.area)));
+render('industrial');</script>
+</body>
+</html>

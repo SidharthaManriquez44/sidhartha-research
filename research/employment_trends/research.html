@@ -1,0 +1,1950 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="Investigación completa sobre la transformación del mercado laboral de la ingeniería en México, 2026–2030.">
+    <meta name="author" content="Sidhartha Manríquez González">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="description"
+          content="Investigación sobre la transformación del mercado laboral de la ingeniería en México, 2026–2030.">
+    <title>Investigación | Ingeniería y Futuro del Trabajo</title>
+    <style>
+        :root {
+            --ink: #071321;
+            --navy: #0b1b2e;
+            --blue: #1656a6;
+            --cyan: #0b9eb8;
+            --muted: #667085;
+            --line: #dfe5ec;
+            --paper: #f5f8fb;
+            --white: #fff;
+            --max: 1240px;
+            --r: 18px;
+            --shadow: 0 18px 55px rgba(13, 35, 65, .10)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.6
+        }
+
+        a {
+            color: inherit
+        }
+
+        .top {
+            height: 5px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan))
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: auto;
+            padding: 0 28px
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, .96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .navin {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .brand {
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: -.04em
+        }
+
+        .brand span {
+            color: var(--blue)
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 13px;
+            color: #475467
+        }
+
+        .navlinks a {
+            text-decoration: none
+        }
+
+        .navlinks a:hover {
+            color: var(--blue)
+        }
+
+        .hero {
+            padding: 88px 0 72px;
+            background: radial-gradient(circle at 85% 15%, rgba(22, 86, 166, .15), transparent 32%), linear-gradient(180deg, #f4f9ff, #fff 82%);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .eyebrow, .kicker {
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        .eyebrow:before {
+            content: "";
+            display: inline-block;
+            width: 27px;
+            height: 2px;
+            background: var(--cyan);
+            vertical-align: middle;
+            margin-right: 9px
+        }
+
+        h1 {
+            font-size: clamp(46px, 6.8vw, 84px);
+            line-height: .95;
+            letter-spacing: -.065em;
+            max-width: 1100px;
+            margin: 18px 0 25px
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--blue)
+        }
+
+        h2 {
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -.045em;
+            margin: 7px 0 0
+        }
+
+        h3 {
+            line-height: 1.2
+        }
+
+        .lead {
+            max-width: 900px;
+            font-size: 20px;
+            color: #475467
+        }
+
+        .meta, .actions, .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .meta {
+            margin: 26px 0
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 999px;
+            padding: 7px 12px;
+            font-size: 12px;
+            color: #667085
+        }
+
+        .actions {
+            margin-top: 26px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 17px;
+            border-radius: 10px;
+            border: 1px solid var(--blue);
+            font-size: 14px;
+            font-weight: 850;
+            text-decoration: none
+        }
+
+        .primary {
+            background: var(--blue);
+            color: #fff
+        }
+
+        .secondary {
+            background: #fff;
+            color: var(--blue)
+        }
+
+        section {
+            padding: 76px 0
+        }
+
+        .dark {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .soft {
+            background: var(--paper)
+        }
+
+        .sectionhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 35px;
+            margin-bottom: 30px
+        }
+
+        .sectionhead p {
+            max-width: 560px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .dark .sectionhead p {
+            color: #b9c6d7
+        }
+
+        .statement {
+            font-size: 29px;
+            line-height: 1.3;
+            max-width: 980px;
+            color: #dce7f5;
+            margin: 22px 0 0
+        }
+
+        .statement strong {
+            color: #fff
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .card, .panel, .figure {
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            background: #fff;
+            padding: 23px
+        }
+
+        .shadow {
+            box-shadow: var(--shadow)
+        }
+
+        .number {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -.05em;
+            color: var(--blue)
+        }
+
+        .small, .legend {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .card h3 {
+            font-size: 15px;
+            margin: 13px 0 0
+        }
+
+        .twocol {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 22px
+        }
+
+        .three {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .quote {
+            border-left: 4px solid var(--blue);
+            padding: 17px 20px;
+            background: #f5f8fd;
+            border-radius: 0 12px 12px 0;
+            font-size: 19px
+        }
+
+        .prose {
+            max-width: 930px;
+            font-size: 16px
+        }
+
+        .prose h2 {
+            margin-top: 55px
+        }
+
+        .prose p {
+            margin: 14px 0
+        }
+
+        .prose li {
+            margin: 7px 0
+        }
+
+        .figure {
+            padding: 14px;
+            overflow: hidden
+        }
+
+        .figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 11px
+        }
+
+        .prose .figure img {
+            max-height: 620px;
+            object-fit: contain
+        }
+
+        .caption {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 9px 3px 0
+        }
+
+        .gridfig {
+            display: grid;
+            grid-template-columns:repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .chart {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns:200px 1fr 72px;
+            gap: 12px;
+            align-items: center;
+            font-size: 13px
+        }
+
+        .track {
+            height: 11px;
+            background: #edf1f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            border-radius: 20px
+        }
+
+        .row b {
+            text-align: right
+        }
+
+        .bar2 {
+            height: 9px;
+            background: #eef2f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .bar2 span {
+            display: block;
+            height: 100%;
+            background: var(--blue)
+        }
+
+        .tablewrap {
+            overflow: auto;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: var(--shadow)
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 980px;
+            font-size: 13px
+        }
+
+        th, td {
+            padding: 13px 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            white-space: nowrap
+        }
+
+        th {
+            background: #f4f7fa;
+            color: #344054;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            position: sticky;
+            top: 0;
+            z-index: 2
+        }
+
+        tbody tr:hover {
+            background: #f8fbff
+        }
+
+        .rank {
+            font-weight: 900;
+            color: var(--blue)
+        }
+
+        .source-note {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 10px
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0
+        }
+
+        .controls input, .controls select {
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 10px 12px;
+            font: inherit;
+            background: #fff
+        }
+
+        .score {
+            font-weight: 850
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            grid-template-columns:repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 28px
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 5%;
+            right: 5%;
+            top: 20px;
+            height: 2px;
+            background: #cbd5e1
+        }
+
+        .time {
+            position: relative;
+            padding-top: 42px
+        }
+
+        .dot {
+            position: absolute;
+            top: 14px;
+            left: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--blue);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 1px var(--blue)
+        }
+
+        .time h3 {
+            font-size: 15px;
+            margin: 8px 0
+        }
+
+        .time p {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .explorer {
+            display: grid;
+            grid-template-columns:260px 1fr;
+            gap: 18px
+        }
+
+        .tabs {
+            display: grid;
+            gap: 7px
+        }
+
+        .tab {
+            border: 1px solid #2a3b53;
+            background: #101f33;
+            color: #dce6f5;
+            border-radius: 10px;
+            padding: 11px 13px;
+            text-align: left;
+            font-weight: 750;
+            font-size: 13px;
+            cursor: pointer
+        }
+
+        .tab.active {
+            background: #173d76;
+            border-color: #2f68ae;
+            color: #fff
+        }
+
+        .profile {
+            border: 1px solid #2a3951;
+            border-radius: 18px;
+            background: #101f33;
+            padding: 25px
+        }
+
+        .profile h3 {
+            margin: 0;
+            font-size: 24px
+        }
+
+        .profile .desc {
+            color: #b9c6d7;
+            font-size: 14px
+        }
+
+        .profile h4 {
+            margin-bottom: 5px
+        }
+
+        .tag {
+            padding: 6px 9px;
+            border-radius: 7px;
+            background: #edf4ff;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 850
+        }
+
+        .method {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 13px
+        }
+
+        .method .card {
+            min-height: 155px
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 8px;
+            border-radius: 7px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            background: #eef5ff;
+            color: var(--blue)
+        }
+
+        .badge.green {
+            background: #edf9f5;
+            color: #16745c
+        }
+
+        .badge.gold {
+            background: #fff7e8;
+            color: #9b6500
+        }
+
+        .badge.gray {
+            background: #f0f2f5;
+            color: #475467
+        }
+
+        .audit {
+            background: #fff8eb;
+            border: 1px solid #f0d8a3;
+            border-radius: 14px;
+            padding: 16px;
+            color: #694c00
+        }
+
+        footer {
+            background: #071321;
+            color: #aeb9ca;
+            padding: 42px 0
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .foot b {
+            color: #fff
+        }
+
+        .foot p {
+            font-size: 12px;
+            max-width: 720px;
+            margin: 0
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .links a {
+            color: #dce6f5;
+            text-decoration: none;
+            font-size: 12px
+        }
+
+        @media (max-width: 950px) {
+            .navlinks {
+                display: none
+            }
+
+            .cards, .method {
+                grid-template-columns:1fr 1fr
+            }
+
+            .twocol, .three, .gridfig {
+                grid-template-columns:1fr
+            }
+
+            .explorer {
+                grid-template-columns:1fr
+            }
+
+            .timeline {
+                grid-template-columns:1fr 1fr
+            }
+
+            .timeline:before {
+                display: none
+            }
+
+            .sectionhead {
+                display: block
+            }
+
+            .sectionhead p {
+                margin-top: 14px
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 18px
+            }
+
+            .hero {
+                padding: 62px 0
+            }
+
+            .cards, .method {
+                grid-template-columns:1fr
+            }
+
+            h2 {
+                font-size: 31px
+            }
+
+            .statement {
+                font-size: 22px
+            }
+
+            .lead {
+                font-size: 17px
+            }
+
+            .row {
+                grid-template-columns:130px 1fr 54px
+            }
+
+            section {
+                padding: 55px 0
+            }
+
+            .foot {
+                display: block
+            }
+
+            .foot p {
+                margin-top: 16px
+            }
+        }
+
+
+        /* Interactive research figures */
+        .figure {
+            position: relative;
+        }
+
+        .figure img {
+            cursor: zoom-in;
+            transition: transform .22s ease, box-shadow .22s ease;
+        }
+
+        .figure:hover img {
+            box-shadow: 0 14px 34px rgba(13, 35, 65, .14);
+        }
+
+        .figure:has(img[onclick])::after {
+            content: "↗";
+            position: absolute;
+            right: 22px;
+            top: 22px;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(7, 19, 33, .78);
+            color: #fff;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity .2s ease, transform .2s ease;
+            pointer-events: none;
+        }
+
+        .figure:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            background: rgba(4, 12, 24, .88);
+            backdrop-filter: blur(8px);
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: min(96vw, 1500px);
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, .45);
+            background: #fff;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 18px;
+            right: 22px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, .28);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .12);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .lightbox-title {
+            position: fixed;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            max-width: 90vw;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(7, 19, 33, .78);
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .lightbox {
+                padding: 14px
+            }
+
+            .lightbox img {
+                max-width: 96vw;
+                max-height: 82vh
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px
+            }
+
+            .lightbox-title {
+                bottom: 10px;
+                font-size: 12px
+            }
+        }
+
+        .evidence-note {
+            margin: 16px 0 26px;
+            padding: 16px 18px;
+            border-left: 4px solid var(--blue);
+            background: #eef5ff;
+            border-radius: 0 12px 12px 0;
+            color: #344054;
+            font-size: 14px;
+            line-height: 1.55
+        }
+
+        .figure.compact img {
+            max-height: 560px;
+            object-fit: contain
+        }
+    </style>
+</head>
+<body>
+<div class="top"></div>
+<nav>
+    <div class="container navin">
+        <a class="brand" href="index.html" aria-label="Ir al inicio">Ingeniería <span>&amp;</span> Futuro del Trabajo</a>
+        <div class="navlinks" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="./research.html">Investigación</a>
+            <a href="data.html">Datos</a>
+            <a href="engineer2030.html">Ingeniero 2030</a>
+            <a href="./research.html#demanda">Demanda</a><a href="./research.html#proyeccion">Proyección</a>
+            <a href="./research.html#competencias">Competencias</a>
+            <a href="methodology.html">Metodología</a>
+            <a href="references.html">Fuentes</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <div class="eyebrow">Investigación completa</div>
+        <h1>La transformación del mercado laboral de la ingeniería</h1>
+        <p class="lead">Tendencias, oportunidades y desafíos en la era de la inteligencia artificial.</p>
+        <div class="meta"><span class="pill">México 2026–2030</span><span
+                class="pill">Sidhartha Manríquez González</span></div>
+    </div>
+</header>
+<section class="soft">
+    <div class="container">
+        <div class="audit"><strong>Lectura metodológica:</strong> el estudio combina datos observados de México,
+            proyecciones internacionales y una síntesis cualitativa de tendencias. Las flechas y trayectorias visuales
+            no deben interpretarse como porcentajes estadísticos.
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container prose">
+        <div class="kicker">Introducción</div>
+        <div class="figure" style="margin-top:24px"><img src="assets/figures/investigacion-01.webp"
+                                                         alt="Objetivo empresarial: reducir tiempos, aumentar productividad, automatizar procesos, utilizar datos y optimizar decisiones">
+        </div>
+        <p>Actualmente, el mercado laboral de ingeniería se encuentra en una etapa de transformación, más que de
+            desaparición de las profesiones tradicionales. Las empresas continúan necesitando ingenieros, pero están
+            cambiando las funciones, herramientas y competencias que esperan de ellos.</p>
+        <p>A nivel internacional, el World Economic Forum identifica como principales fuerzas de transformación del
+            empleo hacia 2030 el avance tecnológico, especialmente la IA, la transición energética, los cambios
+            demográficos, la incertidumbre económica y las transformaciones geopolíticas. El estudio citado recoge
+            información de más de 1,000 empleadores que representan a más de 14 millones de trabajadores.</p>
+
+        <h2 id="situacion">Situación actual del mercado laboral de ingeniería</h2>
+        <p>La ingeniería sigue siendo una profesión con una demanda laboral importante. En Estados Unidos, las
+            ocupaciones de arquitectura e ingeniería tienen una proyección de crecimiento superior al promedio de todas
+            las ocupaciones para 2024–2034, con aproximadamente 186,500 vacantes anuales, considerando crecimiento y
+            reemplazo.</p>
+        <table>
+            <thead>
+            <tr>
+                <th>Grupo ocupacional</th>
+                <th>Crecimiento 2024–2034</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Todas las ocupaciones</td>
+                <td>3.1%</td>
+            </tr>
+            <tr>
+                <td>Arquitectura e ingeniería</td>
+                <td>5.3%</td>
+            </tr>
+            <tr>
+                <td>Computación y matemáticas</td>
+                <td>10.1%</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>Para analizar la demanda, el estudio separa demanda laboral —cuántos trabajadores necesita el mercado y qué
+            tan rápido crece esa necesidad— de empleabilidad —qué tan probable es que una persona consiga y conserve un
+            empleo de calidad—.</p>
+
+        <h2>Los cinco grandes bloques de demanda</h2>
+        <div class="jobgrid">
+            <div class="job"><h3>1. Ingeniería digital</h3>
+                <p>Software · Datos · IA / Machine Learning · Cloud · Ciberseguridad · DevOps · Platform Engineering</p>
+                <span class="tag">Digitalización</span></div>
+            <div class="job"><h3>2. Automatización y manufactura avanzada</h3>
+                <p>Industrial · Automatización · Robótica · Mecatrónica · Control · Manufactura avanzada · Sistemas de
+                    producción</p><span class="tag">Industria 4.0</span></div>
+            <div class="job"><h3>3. Ingeniería energética</h3>
+                <p>Renovables · Redes eléctricas · Almacenamiento · Baterías · Electrificación · Eficiencia
+                    energética</p><span class="tag">Transición energética</span></div>
+            <div class="job"><h3>4. Infraestructura y construcción</h3>
+                <p>Civil · Estructural · Geotécnica · Transporte · Infraestructura hidráulica · Construcción</p><span
+                        class="tag">Infraestructura</span></div>
+            <div class="job"><h3>5. Ingeniería especializada</h3>
+                <p>Semiconductores · Electrónica · Aeroespacial · Automotriz · Biotecnología · Dispositivos médicos ·
+                    Telecomunicaciones · Sistemas autónomos</p><span class="tag">Nichos de alto valor</span></div>
+        </div>
+
+        <h2>Convergencia entre ingeniería y tecnología</h2>
+        <p>Una característica del mercado actual es la convergencia entre ingeniería y tecnología. El estudio
+            ejemplifica esta combinación con distintos perfiles: ingeniería industrial + análisis de datos + Python +
+            SQL + IA + automatización + simulación + optimización; mecánica + CAD/CAE + simulación + automatización +
+            robótica; eléctrica + electrónica + automatización + sistemas inteligentes + energía; civil + BIM + sensores
+            + modelado digital + análisis de datos; y sistemas + software + cloud + datos + IA + ciberseguridad.</p>
+
+        <h2 id="ia">Influencia de la inteligencia artificial</h2>
+        <p>La IA está empezando a automatizar tareas que anteriormente requerían una importante cantidad de trabajo
+            humano, pero simultáneamente está creando demanda de nuevas competencias. El World Economic Forum estima que
+            hacia 2030 podrían crearse 170 millones de puestos y desplazarse 92 millones, con un incremento neto de 78
+            millones; además, aproximadamente 40% de las habilidades requeridas en los trabajos podrían cambiar.</p>
+        <div class="highlight"><strong>La conclusión del estudio:</strong> no sería correcto afirmar simplemente que la
+            IA va a quitar los empleos de los ingenieros. La IA está automatizando determinadas tareas y, al mismo
+            tiempo, aumentando el valor de los ingenieros capaces de utilizarla, supervisarla y tomar decisiones sobre
+            sus resultados.
+        </div>
+        <div class="twocol">
+            <div class="figure"><img src="assets/figures/investigacion-02.webp" alt="Actividades tradicionales"></div>
+            <div class="figure"><img src="assets/figures/investigacion-03.webp" alt="Actividades actuales"></div>
+        </div>
+
+        <h2 id="competencias">Competencias</h2>
+        <p>El mercado laboral está dejando de preguntar únicamente “¿Qué ingeniería estudiaste?” y comienza a preguntar
+            “¿Qué puedes hacer con tu formación de ingeniería?”. El World Economic Forum señala que la brecha de
+            habilidades es uno de los principales obstáculos para la transformación empresarial: 63% de los empleadores
+            encuestados la identifica como una barrera importante. Entre las competencias con mayor crecimiento esperado
+            aparecen IA, big data y redes/ciberseguridad, junto con pensamiento analítico, creatividad, resiliencia,
+            liderazgo y colaboración.</p>
+        <div class="figure"><img src="assets/figures/investigacion-04.webp" alt="Perfil de ingeniero tradicional"></div>
+        <div class="figure"><img src="assets/figures/investigacion-05.webp" alt="Perfil de ingeniero actual"></div>
+
+        <h2>Crecimiento y demanda de especialidades</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Especialidad / ocupación</th>
+                <th>Crecimiento 2024–2034</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Ingeniería industrial</td>
+                <td>+11.0%</td>
+            </tr>
+            <tr>
+                <td>Ingeniería mecánica</td>
+                <td>+9.1%</td>
+            </tr>
+            <tr>
+                <td>Ingeniería de hardware computacional</td>
+                <td>+7.3%</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>El BLS destaca especialmente a la ingeniería industrial, proyectando alrededor de 38,500 empleos adicionales
+            durante el periodo analizado. Además, aparecen nuevas áreas de oportunidad como ingeniería de datos, IA,
+            Machine Learning Engineering, Cloud Engineering, Platform Engineering, ciberseguridad, automatización,
+            robótica, energía, sostenibilidad, sistemas autónomos y semiconductores.</p>
+        <div class="figure"><img src="assets/figures/investigacion-06.webp" alt="Razones de crecimiento de demanda">
+        </div>
+
+        <h2 id="mexico">Situación de México</h2>
+        <p>México está experimentando cambios asociados con nearshoring, manufactura avanzada, automatización, Industria
+            4.0, semiconductores, electrónica, logística, energía e infraestructura.</p>
+        <p>Compara Carreras 2026 del IMCO muestra que la educación superior continúa representando una ventaja salarial
+            en México, aunque existe un problema importante de vinculación entre lo estudiado y el empleo. El estudio
+            señala además que 54% de los profesionistas mexicanos trabaja fuera de su campo de estudio y que 95% de las
+            organizaciones en México anticipa que la IA modificará sus operaciones.</p>
+        <div class="highlight"><strong>Pregunta central:</strong> ¿Qué tipo de ingeniero necesita México?</div>
+        <div class="figure"><img src="assets/figures/investigacion-07.webp" alt="Ingenierías con mayor proyección">
+        </div>
+
+        <h2>Casos relevantes en México</h2>
+        <h3>Ingeniería industrial</h3>
+        <p>El estudio reporta aproximadamente 709,977 personas que estudiaron Ingeniería Industrial y 239,944
+            estudiantes matriculados. Presenta una tasa de ocupación de 95.7% y 4.3% de desempleo; 45.5% de los
+            ingenieros industriales trabaja en manufactura.</p>
+        <h3>Software y sistemas</h3>
+        <p>Desarrollo de Software presenta 96.8% de ocupación, 3.2% de desempleo, 44.7% de vinculación y un salario
+            promedio de $24,927 MXN mensuales, con 175,126 estudiantes matriculados. El software se utiliza también en
+            comercio, manufactura, servicios sociales, transporte y comunicaciones.</p>
+        <h3>Nearshoring</h3>
+        <p>El nearshoring genera demanda de ingenieros industriales, mecánicos, eléctricos, electrónicos, de
+            automatización, calidad, procesos y manufactura, además de especialistas en supply chain y técnicos
+            especializados.</p>
+        <div class="figure"><img src="assets/figures/investigacion-08.webp" alt="Manufactura avanzada"></div>
+        <h3>Semiconductores y electrónica</h3>
+        <p>México busca aumentar su participación en cadenas de valor tecnológicas, lo que genera demanda potencial de
+            profesionales de electrónica, eléctrica, sistemas, hardware, embedded, automatización, control, testing,
+            manufactura y calidad.</p>
+        <div class="twocol">
+            <div class="figure"><img src="assets/figures/investigacion-09.webp" alt="Semiconductores y electrónica">
+            </div>
+            <div class="figure"><img src="assets/figures/investigacion-10.webp"
+                                     alt="Profesionales en ingeniería eléctrica"></div>
+        </div>
+
+        <h2>IA y Datos; El reto de los puestos junior</h2>
+        <p>La IA no implica que todas las empresas mexicanas estén contratando AI Engineers. El cambio importante es que
+            la IA empieza a incorporarse a puestos existentes. El IMCO señala que el mercado evoluciona hacia una mayor
+            importancia de las competencias y que uno de cada cinco empleadores en México planea priorizar habilidades
+            sobre credenciales.</p>
+        <p>El estudio también destaca un reto para los jóvenes: los puestos de entrada pasaron de crecer alrededor de 9%
+            anual en 2021 a registrar variaciones inferiores al 3% entre 2023 y 2025. México puede necesitar más talento
+            tecnológico y de ingeniería, pero eso no significa necesariamente que sea fácil para un recién egresado
+            entrar al mercado.</p>
+        <div class="figure"><img src="assets/figures/investigacion-11.webp" alt="Panorama laboral"></div>
+
+        <h2 id="demanda">Demanda en México: tres dimensiones</h2>
+        <div class="three">
+            <div class="job"><h3>A. Demanda actual</h3>
+                <p>Ocupación · desempleo · informalidad · empleo de calidad · vinculación con el campo.</p></div>
+            <div class="job"><h3>B. Demanda estructural</h3>
+                <p>¿En qué sectores está trabajando actualmente esa ingeniería? Manufactura, servicios, construcción,
+                    etc.</p></div>
+            <div class="job"><h3>C. Demanda futura</h3>
+                <p>IA, automatización, manufactura avanzada, nearshoring, semiconductores, electrificación, energía,
+                    infraestructura, ciberseguridad y datos.</p></div>
+        </div>
+        <div class="figure"><img src="assets/figures/investigacion-12.webp"
+                                 alt="Combinación de áreas con transformación tecnológica"></div>
+
+        <h2>Manufactura Mexicana</h2>
+        <p>La transformación de la manufactura mexicana está creando un punto de convergencia entre Ingeniería
+            Industrial, Mecánica, Electrónica, Automatización y Software.</p>
+        <table>
+            <thead>
+            <tr>
+                <th>Área</th>
+                <th>Participación en manufactura</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Ingeniería industrial</td>
+                <td>45%</td>
+            </tr>
+            <tr>
+                <td>Electrónica / Automatización</td>
+                <td>39.5%</td>
+            </tr>
+            <tr>
+                <td>Mecánica</td>
+                <td>37.7%</td>
+            </tr>
+            <tr>
+                <td>Software</td>
+                <td>14.2%</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="twocol">
+            <div class="figure"><img src="assets/figures/investigacion-13.webp" alt="Fábrica inteligente"></div>
+            <div class="figure"><img src="assets/figures/investigacion-14.webp" alt="Panorama de ingenierías"></div>
+        </div>
+
+        <h2>Ingeniería y tecnología en México</h2>
+        <div class="twocol">
+            <div class="figure"><img src="assets/figures/investigacion-19.webp"
+                                     alt="Consolidado de ingeniería en México"></div>
+            <div class="figure"><img src="assets/figures/investigacion-16.webp" alt="Empleabilidad"></div>
+        </div>
+        <div class="twocol">
+            <div class="figure"><img src="assets/figures/investigacion-17.webp" alt="Vinculación laboral"></div>
+            <div class="figure"><img src="assets/figures/investigacion-18.webp" alt="Salario promedio"></div>
+        </div>
+        <div class="figure"><img src="assets/figures/investigacion-15.webp" alt="Empleo de calidad"></div>
+
+        <h2>Puestos, tecnologías y tendencias</h2>
+        <div class="figure"><img src="assets/figures/investigacion-20.webp" alt="Puestos, tecnologías y tendencias">
+        </div>
+        <div class="figure"><img src="assets/figures/investigacion-21.webp"
+                                 alt="Ingeniería y tecnología en México 2026-2030"></div>
+
+        <h2>Ingenierías y puestos con mayor demanda</h2>
+        <p>La evidencia disponible concentra la demanda especialmente en cinco grandes áreas: tecnología/software/datos;
+            automatización e ingeniería industrial; mecánica y manufactura avanzada; electrónica, eléctrica y
+            semiconductores; y energía y transición energética.</p>
+        <h3>1. Software, sistemas y computación</h3>
+        <p>Software Engineer · Backend Engineer · Full-Stack Engineer · Cloud Engineer · DevOps Engineer · Platform
+            Engineer · AI Engineer · Machine Learning Engineer · Systems Engineer.</p>
+        <p>El BLS proyecta 15.8% de crecimiento para software developers entre 2024 y 2034, equivalente a unos 267,700
+            empleos adicionales.</p>
+        <div class="figure"><img src="assets/figures/investigacion-22.webp"
+                                 alt="Tendencia del perfil de ingeniería de sistemas"></div>
+        <h3>2. Ingeniería de datos e inteligencia artificial</h3>
+        <p>Data Engineer · Data Scientist · Machine Learning Engineer · AI Engineer · Analytics Engineer · MLOps
+            Engineer · AI Research Engineer. BLS proyecta 33.5% de crecimiento para Data Scientist y 21.5% para
+            Operations Research Analysts entre 2024 y 2034.</p>
+        <h3>3. Ciberseguridad</h3>
+        <p>Security Engineer · Cybersecurity Engineer · Information Security Analyst · Cloud Security Engineer ·
+            Security Architect · SOC Engineer · Application Security Engineer. Los analistas de seguridad de la
+            información tienen una proyección de 28.5% de crecimiento.</p>
+        <div class="figure"><img src="assets/figures/investigacion-23.webp" alt="Razones de ciberseguridad"></div>
+        <h3>4. Ingeniería industrial</h3>
+        <p>Industrial Engineer · Process Engineer · Operations Engineer · Supply Chain Engineer · Continuous Improvement
+            Engineer · Manufacturing Engineer · Operations Research Analyst · Automation Engineer. La ingeniería
+            industrial converge con Data Science, IA, automatización y Operations Research.</p>
+        <div class="figure"><img src="assets/figures/investigacion-24.webp" alt="Estrategia empresarial"></div>
+        <h3>5. Ingeniería mecánica y manufactura avanzada</h3>
+        <p>Mechanical Engineer · Manufacturing Engineer · Robotics Engineer · Automation Engineer · Controls Engineer ·
+            Mechatronics Engineer · Reliability Engineer. El BLS relaciona el crecimiento de ingeniería industrial y
+            mecánica con maquinaria automatizada, robótica colaborativa, impresión 3D y automatización de procesos.</p>
+        <div class="twocol">
+            <div class="figure"><img src="assets/figures/investigacion-25.webp" alt="Ingeniería mecánica antes"></div>
+            <div class="figure"><img src="assets/figures/investigacion-26.webp" alt="Ingeniería mecánica actualmente">
+            </div>
+        </div>
+        <h3>6. Ingeniería eléctrica, electrónica y semiconductores</h3>
+        <p>Electrical Engineer · Electronics Engineer · Power Systems Engineer · Controls Engineer · Semiconductor
+            Engineer · Hardware Engineer · Embedded Systems Engineer · Electrical Design Engineer. El BLS proyecta 6.2%
+            de crecimiento para electronics engineers (except computer) entre 2024 y 2034.</p>
+        <div class="figure"><img src="assets/figures/investigacion-27.webp" alt="IA e infraestructura"></div>
+        <h3>7. Energía e ingeniería ambiental</h3>
+        <p>Renewable Energy Engineer · Energy Engineer · Solar Engineer · Wind Engineer · Battery Engineer · Power
+            Systems Engineer · Sustainability Engineer · Environmental Engineer. El estudio reporta proyecciones BLS de
+            180.2% para generación solar eléctrica y 81.4% para generación eólica entre 2024 y 2034 en EE. UU.</p>
+        <div class="figure"><img src="assets/figures/investigacion-28.webp" alt="Tendencias del mercado laboral"></div>
+
+        <h2>La combinación de conocimientos que demanda el mercado</h2>
+        <div class="figure"><img src="assets/figures/investigacion-29.webp" alt="Combinación de conocimientos"></div>
+        <p>Eso explica por qué un ingeniero tradicional puede tener buenas perspectivas, pero un ingeniero capaz de
+            combinar su especialidad con tecnología digital puede acceder a un mercado laboral considerablemente más
+            amplio.</p>
+        <p>En contraste, Ingeniería Industrial tiene una enorme presencia en el mercado —709,977 personas con esa
+            formación y 239,944 estudiantes matriculados— pero solamente 28.8% trabaja en algo relacionado con lo que
+            estudió, según la clasificación utilizada en el estudio.</p>
+
+
+        <section id="proyeccion" class="soft">
+            <div class="container prose">
+                <div class="kicker">Proyección 2026–2030</div>
+                <h2>Índice de Oportunidad Laboral de Ingeniería 2026–2030</h2>
+                <p>La proyección no sustituye los datos laborales observados: los complementa con una evaluación
+                    prospectiva de las transformaciones que pueden modificar la demanda de ingeniería en México. El
+                    documento base señala que la competencia futura será cada vez más entre perfiles capaces de integrar
+                    ingeniería, tecnología y conocimiento sectorial.</p>
+
+                <div class="figure"><img src="assets/figures/investigacion-35.webp"
+                                         alt="Índice prospectivo de oportunidad laboral en ingenierías 2026–2030"></div>
+                <div class="evidence-note"><strong>Matriz de evidencia prospectiva 2026–2030.</strong><br>Fuentes base:
+                    IMCO Tendencias educativas y del empleo 2026 y WEF Future of Jobs Report 2025, especialmente sus
+                    apartados de México, empleos y habilidades. IMCO señala que 95% de las organizaciones esperan
+                    cambios operativos por IA, mientras que el WEF identifica IA/big data, redes/ciberseguridad y
+                    alfabetización tecnológica entre las habilidades de mayor crecimiento.
+                </div>
+
+                <h2>1. Fórmula general</h2>
+                <div class="quote"><strong>I<sub>O</sub> = 0.50 L + 0.50 P</strong></div>
+                <p><strong>L</strong> representa la situación laboral observada en México y <strong>P</strong>
+                    representa la exposición de cada área a las transformaciones 2026–2030. Los indicadores laborales se
+                    construyen con información de IMCO/ENOE; el componente prospectivo es una construcción analítica del
+                    estudio, no un indicador oficial de IMCO.</p>
+
+                <h2>2. Situación laboral actual: componente L</h2>
+                <p>La dimensión laboral utiliza seis indicadores de IMCO. Cada indicador tiene un peso explícito y
+                    después se normaliza dentro de la muestra de nueve carreras para hacer comparables porcentajes,
+                    salarios y demás escalas.</p>
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Indicador</th>
+                            <th>Peso</th>
+                            <th>Tratamiento</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Ocupación</td>
+                            <td>20%</td>
+                            <td>Más es mejor</td>
+                        </tr>
+                        <tr>
+                            <td>Desempleo</td>
+                            <td>15%</td>
+                            <td>Menos es mejor</td>
+                        </tr>
+                        <tr>
+                            <td>Vinculación con estudios</td>
+                            <td>20%</td>
+                            <td>Más es mejor</td>
+                        </tr>
+                        <tr>
+                            <td>Informalidad</td>
+                            <td>15%</td>
+                            <td>Menos es mejor</td>
+                        </tr>
+                        <tr>
+                            <td>Empleo de calidad</td>
+                            <td>15%</td>
+                            <td>Más es mejor</td>
+                        </tr>
+                        <tr>
+                            <td>Salario</td>
+                            <td>15%</td>
+                            <td>Más es mejor</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>La vinculación es especialmente relevante porque IMCO la incorpora en 2026 como una medida de la
+                    proporción de personas ocupadas cuya ocupación está directamente relacionada con la carrera
+                    estudiada.</p>
+
+                <h2>3. Normalización Min–Max</h2>
+                <p>No se pueden sumar directamente variables con escalas distintas. Por ello, el estudio utiliza
+                    normalización Min–Max dentro de la muestra de nueve carreras.</p>
+                <div class="twocol">
+                    <div class="panel"><h3>Cuando más es mejor</h3>
+                        <div class="quote"><strong>Score<sub>i</sub> = 100 · (x<sub>i</sub> − x<sub>min</sub>) / (x<sub>max</sub>
+                            − x<sub>min</sub>)</strong></div>
+                    </div>
+                    <div class="panel"><h3>Cuando menos es mejor</h3>
+                        <div class="quote"><strong>Score<sub>i</sub> = 100 · (x<sub>max</sub> − x<sub>i</sub>) / (x<sub>max</sub>
+                            − x<sub>min</sub>)</strong></div>
+                    </div>
+                </div>
+                <p>El ejemplo del documento para Electrónica / Automatización obtiene un indicador laboral de <strong>87.8/100</strong>
+                    después de normalizar ocupación, desempleo, vinculación, informalidad, empleo de calidad y salario.
+                </p>
+
+                <h2>4. Potencial 2026–2030: componente P</h2>
+                <p>El potencial se estructura en cuatro dimensiones. La evidencia del documento combina señales
+                    mexicanas de IMCO/WEF con la identificación de puestos y habilidades de crecimiento hacia 2030.</p>
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Peso</th>
+                            <th>Máximo</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>T — Transformación tecnológica</td>
+                            <td>40%</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>S — Sectores estratégicos en México</td>
+                            <td>30%</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>J — Puestos emergentes</td>
+                            <td>20%</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>H — Habilidades futuras</td>
+                            <td>10%</td>
+                            <td>10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="quote"><strong>P = 0.40T + 0.30S + 0.20J + 0.10H</strong></div>
+
+                <h2>5. T — Transformación tecnológica /40</h2>
+                <p>Se evalúan cuatro señales, cada una con un máximo de 10 puntos: exposición a IA/datos, exposición a
+                    automatización/robótica, digitalización de procesos/sistemas e intensidad tecnológica futura.</p>
+
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Ingeniería</th>
+                            <th>IA/datos</th>
+                            <th>Automatización</th>
+                            <th>Digitalización</th>
+                            <th>Intensidad</th>
+                            <th>T /40</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Electrónica / Automatización</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td class="score">38</td>
+                        </tr>
+                        <tr>
+                            <td>Software</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td class="score">37</td>
+                        </tr>
+                        <tr>
+                            <td>Industrial</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td>8</td>
+                            <td class="score">36</td>
+                        </tr>
+                        <tr>
+                            <td>Química</td>
+                            <td>7</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td class="score">31</td>
+                        </tr>
+                        <tr>
+                            <td>Mecánica</td>
+                            <td>7</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td class="score">34</td>
+                        </tr>
+                        <tr>
+                            <td>Electricidad / Energía</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>8</td>
+                            <td class="score">32</td>
+                        </tr>
+                        <tr>
+                            <td>Civil / Construcción</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>9</td>
+                            <td>8</td>
+                            <td class="score">30</td>
+                        </tr>
+                        <tr>
+                            <td>Ciencias Computacionales</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td class="score">38</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiental / Sostenibilidad</td>
+                            <td>8</td>
+                            <td>7</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td class="score">33</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Para México, el documento destaca que 95% de las empresas espera que la IA transforme sus
+                    operaciones, 63% prevé mayor utilización de robótica y 82% busca acelerar la automatización.</p>
+
+                <h2>6. S — Sectores estratégicos en México /30</h2>
+                <p>Esta dimensión mide exposición a manufactura/nearshoring, energía/infraestructura, servicios
+                    digitales, transición verde y diversificación sectorial.</p>
+
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Ingeniería</th>
+                            <th>Manufactura /8</th>
+                            <th>Energía /6</th>
+                            <th>Digital /6</th>
+                            <th>Verde /5</th>
+                            <th>Diversificación /5</th>
+                            <th>S /30</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Electrónica / Automatización</td>
+                            <td>8</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>8</td>
+                            <td class="score">28</td>
+                        </tr>
+                        <tr>
+                            <td>Software</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td class="score">27</td>
+                        </tr>
+                        <tr>
+                            <td>Industrial</td>
+                            <td>8</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td class="score">28</td>
+                        </tr>
+                        <tr>
+                            <td>Química</td>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td class="score">23</td>
+                        </tr>
+                        <tr>
+                            <td>Mecánica</td>
+                            <td>8</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>7</td>
+                            <td class="score">25</td>
+                        </tr>
+                        <tr>
+                            <td>Electricidad / Energía</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td class="score">24</td>
+                        </tr>
+                        <tr>
+                            <td>Civil / Construcción</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td class="score">23</td>
+                        </tr>
+                        <tr>
+                            <td>Ciencias Computacionales</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td>5*</td>
+                            <td class="score">21</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiental / Sostenibilidad</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td class="score">24</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="source-note">*El PDF muestra originalmente 12 puntos en diversificación para Ciencias
+                    Computacionales, aunque el máximo definido es 5. Al mantener estrictamente la escala, S=21. Esta
+                    corrección también cambia el potencial de esa área frente a una versión preliminar del modelo.</p>
+
+                <h2>7. J — Puestos emergentes /20</h2>
+                <p>La pregunta deja de ser solamente “¿qué carrera es?” y pasa a ser “¿qué tan directamente conecta con
+                    puestos que están creciendo?”.</p>
+
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Ingeniería</th>
+                            <th>Puestos emergentes principales</th>
+                            <th>J /20</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Electrónica / Automatización</td>
+                            <td>Automation, Controls, Robotics, Embedded, IoT</td>
+                            <td class="score">19</td>
+                        </tr>
+                        <tr>
+                            <td>Software</td>
+                            <td>Software, Cloud, DevOps, AI, MLOps</td>
+                            <td class="score">18</td>
+                        </tr>
+                        <tr>
+                            <td>Industrial</td>
+                            <td>Operations, Supply Chain, Automation, Optimization, Data/Operations</td>
+                            <td class="score">18</td>
+                        </tr>
+                        <tr>
+                            <td>Química</td>
+                            <td>Process, Materials, Pharma, Battery, Semiconductor</td>
+                            <td class="score">16</td>
+                        </tr>
+                        <tr>
+                            <td>Mecánica</td>
+                            <td>Robotics, Manufacturing, Maintenance, Digital Twin</td>
+                            <td class="score">16</td>
+                        </tr>
+                        <tr>
+                            <td>Electricidad / Energía</td>
+                            <td>Energy, Renewable, EV, Battery, Smart Grid</td>
+                            <td class="score">15</td>
+                        </tr>
+                        <tr>
+                            <td>Civil / Construcción</td>
+                            <td>BIM, Digital Construction, Infrastructure, Project Data</td>
+                            <td class="score">15</td>
+                        </tr>
+                        <tr>
+                            <td>Ciencias Computacionales</td>
+                            <td>AI, ML, Big Data, Algorithms, Cybersecurity</td>
+                            <td class="score">19</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiental / Sostenibilidad</td>
+                            <td>ESG, Sustainability, Environmental Data, Circular Economy</td>
+                            <td class="score">15</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>8. H — Habilidades futuras /10</h2>
+                <p>El componente recoge capacidades cuya importancia aumenta hacia 2030: IA y big data, redes y
+                    ciberseguridad, alfabetización tecnológica, pensamiento creativo, resiliencia/flexibilidad/agilidad,
+                    liderazgo y responsabilidad ambiental.</p>
+
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Ingeniería</th>
+                            <th>Habilidades principales</th>
+                            <th>H /10</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Electrónica / Automatización</td>
+                            <td>AI, programación, control, sistemas, analytical thinking</td>
+                            <td class="score">9</td>
+                        </tr>
+                        <tr>
+                            <td>Software</td>
+                            <td>AI, programación, cloud, data, cybersecurity</td>
+                            <td class="score">8</td>
+                        </tr>
+                        <tr>
+                            <td>Industrial</td>
+                            <td>Data, AI, systems thinking, optimization, leadership</td>
+                            <td class="score">9</td>
+                        </tr>
+                        <tr>
+                            <td>Química</td>
+                            <td>Data, automation, materials, analytical thinking</td>
+                            <td class="score">8</td>
+                        </tr>
+                        <tr>
+                            <td>Mecánica</td>
+                            <td>Automation, robotics, CAD, data, systems</td>
+                            <td class="score">7</td>
+                        </tr>
+                        <tr>
+                            <td>Electricidad / Energía</td>
+                            <td>Digital systems, energy tech, data, sustainability</td>
+                            <td class="score">7</td>
+                        </tr>
+                        <tr>
+                            <td>Civil / Construcción</td>
+                            <td>BIM, digitalization, project management, sustainability</td>
+                            <td class="score">8</td>
+                        </tr>
+                        <tr>
+                            <td>Ciencias Computacionales</td>
+                            <td>AI, Big Data, algorithms, cybersecurity, programming</td>
+                            <td class="score">8</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiental / Sostenibilidad</td>
+                            <td>ESG, environmental data, sustainability, systems thinking</td>
+                            <td class="score">8</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>9. Matriz prospectiva consolidada</h2>
+                <p>Con la escala corregida, el componente prospectivo queda:</p>
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Ingeniería</th>
+                            <th>T /40</th>
+                            <th>S /30</th>
+                            <th>J /20</th>
+                            <th>H /10</th>
+                            <th>P /100</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="rank">1</td>
+                            <td>Electrónica / Automatización</td>
+                            <td>38</td>
+                            <td>28</td>
+                            <td>19</td>
+                            <td>9</td>
+                            <td class="score">94</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">2</td>
+                            <td>Industrial</td>
+                            <td>36</td>
+                            <td>28</td>
+                            <td>18</td>
+                            <td>9</td>
+                            <td class="score">91</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">3</td>
+                            <td>Software</td>
+                            <td>37</td>
+                            <td>27</td>
+                            <td>18</td>
+                            <td>8</td>
+                            <td class="score">90</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">4</td>
+                            <td>Ciencias Computacionales</td>
+                            <td>38</td>
+                            <td>21</td>
+                            <td>19</td>
+                            <td>8</td>
+                            <td class="score">86</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">5</td>
+                            <td>Mecánica</td>
+                            <td>34</td>
+                            <td>25</td>
+                            <td>16</td>
+                            <td>7</td>
+                            <td class="score">82</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">6</td>
+                            <td>Ambiental / Sostenibilidad</td>
+                            <td>33</td>
+                            <td>24</td>
+                            <td>15</td>
+                            <td>8</td>
+                            <td class="score">80</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">7</td>
+                            <td>Química</td>
+                            <td>31</td>
+                            <td>23</td>
+                            <td>16</td>
+                            <td>8</td>
+                            <td class="score">78</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">8</td>
+                            <td>Electricidad / Energía</td>
+                            <td>32</td>
+                            <td>24</td>
+                            <td>15</td>
+                            <td>7</td>
+                            <td class="score">78</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">9</td>
+                            <td>Civil / Construcción</td>
+                            <td>30</td>
+                            <td>23</td>
+                            <td>15</td>
+                            <td>8</td>
+                            <td class="score">76</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="figure"><img src="assets/figures/investigacion-31.webp"
+                                         alt="Ranking prospectivo visual 2026–2030"></div>
+
+                <h2>10. De carreras a áreas emergentes</h2>
+                <p>El segundo documento también cambia la unidad de análisis: además de comparar carreras, identifica
+                    áreas y especializaciones donde se concentra la oportunidad. Esto permite observar que el mercado
+                    puede demandar una combinación de ingeniería con datos, automatización, ciberseguridad,
+                    semiconductores, energía o sostenibilidad.</p>
+                <div class="gridfig">
+                    <div class="figure"><img src="assets/figures/investigacion-41.webp"
+                                             alt="Áreas emergentes con mayor oportunidad laboral 2026–2030"></div>
+                    <div class="figure"><img src="assets/figures/investigacion-42.webp"
+                                             alt="Áreas de ingeniería por prioridad de oportunidad laboral en México 2026–2030">
+                    </div>
+                </div>
+
+                <h2>11. Evidencia por área de ingeniería</h2>
+                <div class="tablewrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Área</th>
+                            <th>Señal de transformación</th>
+                            <th>Puestos destacados</th>
+                            <th>P /100</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Electrónica / Mecatrónica</td>
+                            <td>Automatización, robótica, IoT e IA; fuerte conexión con manufactura y semiconductores.
+                            </td>
+                            <td>Automation, Controls, Robotics, Embedded, IoT, Vision Systems</td>
+                            <td class="score">94</td>
+                        </tr>
+                        <tr>
+                            <td>Software</td>
+                            <td>IA, cloud, datos y digitalización transversal.</td>
+                            <td>Software, Cloud, DevOps, Data, AI, MLOps</td>
+                            <td class="score">90</td>
+                        </tr>
+                        <tr>
+                            <td>Industrial</td>
+                            <td>Automatización, analítica, optimización, manufactura y nearshoring.</td>
+                            <td>Operations, Process, Supply Chain, Manufacturing, Automation</td>
+                            <td class="score">91</td>
+                        </tr>
+                        <tr>
+                            <td>Química</td>
+                            <td>Procesos, materiales, farmacéutica, energía, baterías y semiconductores.</td>
+                            <td>Process, Materials, Pharma, Battery, Semiconductor</td>
+                            <td class="score">78</td>
+                        </tr>
+                        <tr>
+                            <td>Mecánica / Manufactura</td>
+                            <td>Robótica, automatización, simulación y manufactura avanzada.</td>
+                            <td>Manufacturing, Robotics, Reliability, Digital Twin</td>
+                            <td class="score">82</td>
+                        </tr>
+                        <tr>
+                            <td>Electricidad / Energía</td>
+                            <td>Electrificación, almacenamiento, EV, infraestructura eléctrica y smart grid.</td>
+                            <td>Energy, Renewable, Battery, EV, Smart Grid</td>
+                            <td class="score">78</td>
+                        </tr>
+                        <tr>
+                            <td>Civil / Construcción</td>
+                            <td>Digitalización de infraestructura, BIM, GIS, sensores y digital twins.</td>
+                            <td>BIM, Infrastructure, Digital Construction, Project Data</td>
+                            <td class="score">76</td>
+                        </tr>
+                        <tr>
+                            <td>Ciencias Computacionales</td>
+                            <td>IA, ML, Big Data, algoritmos, software y ciberseguridad.</td>
+                            <td>AI, ML, Big Data, Algorithms, Cybersecurity</td>
+                            <td class="score">86*</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiental / Sostenibilidad</td>
+                            <td>Transición verde, datos ambientales, eficiencia y economía circular.</td>
+                            <td>Sustainability, ESG, Environmental Data, Circular Economy</td>
+                            <td class="score">80</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="source-note">*86 corresponde a la versión corregida de la matriz prospectiva, después de
+                    limitar la diversificación sectorial de Ciencias Computacionales al máximo definido de 5 puntos.</p>
+
+                <div class="audit"><strong>Advertencia metodológica:</strong> el segundo PDF contiene una versión
+                    preliminar del caso de Ciencias Computacionales con P=95 y una matriz posterior que identifica el
+                    exceso de la escala de diversificación. En esta publicación se conserva la corrección explícita del
+                    propio documento: diversificación máxima 5, S=21 y P=86. El índice prospectivo no es una
+                    probabilidad de conseguir empleo; expresa la combinación de exposición tecnológica, sectores,
+                    puestos emergentes y habilidades.
+                </div>
+            </div>
+        </section>
+
+        <h2>Variables para evaluar una carrera o área</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Variable</th>
+                <th>Pregunta</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Volumen</td>
+                <td>¿Cuántos puestos existen?</td>
+            </tr>
+            <tr>
+                <td>Crecimiento</td>
+                <td>¿Está aumentando la cantidad de puestos?</td>
+            </tr>
+            <tr>
+                <td>Especialización</td>
+                <td>¿Qué conocimientos requiere?</td>
+            </tr>
+            <tr>
+                <td>Salario</td>
+                <td>¿Cuánto paga el mercado?</td>
+            </tr>
+            <tr>
+                <td>Oferta de talento</td>
+                <td>¿Cuántos egresados compiten?</td>
+            </tr>
+            <tr>
+                <td>Vinculación</td>
+                <td>¿Los egresados trabajan realmente en su campo?</td>
+            </tr>
+            <tr>
+                <td>Tecnología</td>
+                <td>¿Qué tecnologías están impulsando la demanda?</td>
+            </tr>
+            <tr>
+                <td>Proyección</td>
+                <td>¿Continuará creciendo?</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Conclusión</h2>
+        <p>La evidencia 2026–2030 refuerza una conclusión central: México está demandando una combinación de ingeniería
+            tradicional y capacidades digitales. La manufactura, infraestructura, energía y servicios están incorporando
+            automatización, datos, software e inteligencia artificial, transformando los perfiles profesionales y
+            creando una demanda creciente por ingenieros capaces de integrar conocimientos técnicos con tecnologías
+            digitales.</p>
+        <div class="highlight"><strong>Conclusión principal:</strong> las áreas con mayor potencial no necesariamente
+            son aquellas que sustituyen a las ingenierías tradicionales, sino aquellas que las combinan con datos,
+            programación, inteligencia artificial, automatización, robótica, electrónica y conocimiento especializado
+            del sector.
+        </div>
+    </div>
+</section>
+
+<section class="soft">
+    <div class="container">
+        <div class="actions"><a class="btn primary" href="data.html">Explorar la tabla maestra de datos →</a><a
+                class="btn secondary" href="engineer2030.html">Ver el perfil del Ingeniero 2030 →</a></div>
+    </div>
+</section>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gráfico ampliado">
+    <button class="lightbox-close" type="button" aria-label="Cerrar gráfico">×</button>
+    <img id="lightboxImage" alt="">
+    <div class="lightbox-title" id="lightboxTitle"></div>
+</div>
+<script>
+    (function () {
+        const box = document.getElementById('lightbox');
+        const out = document.getElementById('lightboxImage');
+        const title = document.getElementById('lightboxTitle');
+        if (!box || !out) return;
+        document.querySelectorAll('.figure img').forEach(img => {
+            img.setAttribute('tabindex', '0');
+            img.setAttribute('role', 'button');
+            img.setAttribute('aria-label', 'Ampliar gráfico: ' + (img.alt || 'gráfico'));
+            const open = () => {
+                out.src = img.currentSrc || img.src;
+                out.alt = img.alt || 'Gráfico ampliado';
+                title.textContent = img.alt || 'Gráfico de la investigación';
+                box.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            };
+            img.addEventListener('click', open);
+            img.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    open();
+                }
+            });
+        });
+        const close = () => {
+            box.classList.remove('open');
+            out.removeAttribute('src');
+            document.body.style.overflow = '';
+        };
+        box.addEventListener('click', e => {
+            if (e.target === box) close();
+        });
+        box.querySelector('.lightbox-close').addEventListener('click', close);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && box.classList.contains('open')) close();
+        });
+    })();
+</script>
+<footer>
+    <div class="container foot">
+        <div><b>Ingeniería & Futuro del Trabajo</b>
+            <div>México · 2026–2030</div>
+        </div>
+        <p>Investigación de <strong>Sidhartha Manríquez González</strong>. <br>Documento de investigación. Las cifras
+            conservan el contexto y las fuentes señaladas en el estudio.</p></div>
+</footer>
+</body>
+</html>

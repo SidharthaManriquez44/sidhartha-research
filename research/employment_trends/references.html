@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="Referencias y fuentes de la investigación sobre transformación del mercado laboral de la ingeniería.">
+    <meta name="author" content="Sidhartha Manríquez González">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --ink: #071321;
+            --navy: #0b1b2e;
+            --blue: #1656a6;
+            --cyan: #0b9eb8;
+            --muted: #667085;
+            --line: #dfe5ec;
+            --paper: #f5f8fb;
+            --white: #fff;
+            --max: 1240px;
+            --r: 18px;
+            --shadow: 0 18px 55px rgba(13, 35, 65, .10)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.6
+        }
+
+        a {
+            color: inherit
+        }
+
+        .top {
+            height: 5px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan))
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: auto;
+            padding: 0 28px
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, .96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .navin {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .brand {
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: -.04em
+        }
+
+        .brand span {
+            color: var(--blue)
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 13px;
+            color: #475467
+        }
+
+        .navlinks a {
+            text-decoration: none
+        }
+
+        .navlinks a:hover {
+            color: var(--blue)
+        }
+
+        .hero {
+            padding: 88px 0 72px;
+            background: radial-gradient(circle at 85% 15%, rgba(22, 86, 166, .15), transparent 32%), linear-gradient(180deg, #f4f9ff, #fff 82%);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .eyebrow, .kicker {
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        .eyebrow:before {
+            content: "";
+            display: inline-block;
+            width: 27px;
+            height: 2px;
+            background: var(--cyan);
+            vertical-align: middle;
+            margin-right: 9px
+        }
+
+        h1 {
+            font-size: clamp(46px, 6.8vw, 84px);
+            line-height: .95;
+            letter-spacing: -.065em;
+            max-width: 1100px;
+            margin: 18px 0 25px
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--blue)
+        }
+
+        h2 {
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -.045em;
+            margin: 7px 0 0
+        }
+
+        h3 {
+            line-height: 1.2
+        }
+
+        .lead {
+            max-width: 900px;
+            font-size: 20px;
+            color: #475467
+        }
+
+        .meta, .actions, .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .meta {
+            margin: 26px 0
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 999px;
+            padding: 7px 12px;
+            font-size: 12px;
+            color: #667085
+        }
+
+        .actions {
+            margin-top: 26px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 17px;
+            border-radius: 10px;
+            border: 1px solid var(--blue);
+            font-size: 14px;
+            font-weight: 850;
+            text-decoration: none
+        }
+
+        .primary {
+            background: var(--blue);
+            color: #fff
+        }
+
+        .secondary {
+            background: #fff;
+            color: var(--blue)
+        }
+
+        section {
+            padding: 76px 0
+        }
+
+        .dark {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .soft {
+            background: var(--paper)
+        }
+
+        .sectionhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 35px;
+            margin-bottom: 30px
+        }
+
+        .sectionhead p {
+            max-width: 560px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .dark .sectionhead p {
+            color: #b9c6d7
+        }
+
+        .statement {
+            font-size: 29px;
+            line-height: 1.3;
+            max-width: 980px;
+            color: #dce7f5;
+            margin: 22px 0 0
+        }
+
+        .statement strong {
+            color: #fff
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .card, .panel, .figure {
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            background: #fff;
+            padding: 23px
+        }
+
+        .shadow {
+            box-shadow: var(--shadow)
+        }
+
+        .number {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -.05em;
+            color: var(--blue)
+        }
+
+        .small, .legend {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .card h3 {
+            font-size: 15px;
+            margin: 13px 0 0
+        }
+
+        .twocol {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 22px
+        }
+
+        .three {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .quote {
+            border-left: 4px solid var(--blue);
+            padding: 17px 20px;
+            background: #f5f8fd;
+            border-radius: 0 12px 12px 0;
+            font-size: 19px
+        }
+
+        .prose {
+            max-width: 930px;
+            font-size: 16px
+        }
+
+        .prose h2 {
+            margin-top: 55px
+        }
+
+        .prose p {
+            margin: 14px 0
+        }
+
+        .prose li {
+            margin: 7px 0
+        }
+
+        .figure {
+            padding: 14px;
+            overflow: hidden
+        }
+
+        .figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 11px
+        }
+
+        .caption {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 9px 3px 0
+        }
+
+        .gridfig {
+            display: grid;
+            grid-template-columns:repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .chart {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns:200px 1fr 72px;
+            gap: 12px;
+            align-items: center;
+            font-size: 13px
+        }
+
+        .track {
+            height: 11px;
+            background: #edf1f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            border-radius: 20px
+        }
+
+        .row b {
+            text-align: right
+        }
+
+        .bar2 {
+            height: 9px;
+            background: #eef2f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .bar2 span {
+            display: block;
+            height: 100%;
+            background: var(--blue)
+        }
+
+        .tablewrap {
+            overflow: auto;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: var(--shadow)
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 980px;
+            font-size: 13px
+        }
+
+        th, td {
+            padding: 13px 12px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            white-space: nowrap
+        }
+
+        th {
+            background: #f4f7fa;
+            color: #344054;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            position: sticky;
+            top: 0;
+            z-index: 2
+        }
+
+        tbody tr:hover {
+            background: #f8fbff
+        }
+
+        .rank {
+            font-weight: 900;
+            color: var(--blue)
+        }
+
+        .source-note {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 10px
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0
+        }
+
+        .controls input, .controls select {
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 10px 12px;
+            font: inherit;
+            background: #fff
+        }
+
+        .score {
+            font-weight: 850
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            grid-template-columns:repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 28px
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 5%;
+            right: 5%;
+            top: 20px;
+            height: 2px;
+            background: #cbd5e1
+        }
+
+        .time {
+            position: relative;
+            padding-top: 42px
+        }
+
+        .dot {
+            position: absolute;
+            top: 14px;
+            left: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--blue);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 1px var(--blue)
+        }
+
+        .time h3 {
+            font-size: 15px;
+            margin: 8px 0
+        }
+
+        .time p {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .explorer {
+            display: grid;
+            grid-template-columns:260px 1fr;
+            gap: 18px
+        }
+
+        .tabs {
+            display: grid;
+            gap: 7px
+        }
+
+        .tab {
+            border: 1px solid #2a3b53;
+            background: #101f33;
+            color: #dce6f5;
+            border-radius: 10px;
+            padding: 11px 13px;
+            text-align: left;
+            font-weight: 750;
+            font-size: 13px;
+            cursor: pointer
+        }
+
+        .tab.active {
+            background: #173d76;
+            border-color: #2f68ae;
+            color: #fff
+        }
+
+        .profile {
+            border: 1px solid #2a3951;
+            border-radius: 18px;
+            background: #101f33;
+            padding: 25px
+        }
+
+        .profile h3 {
+            margin: 0;
+            font-size: 24px
+        }
+
+        .profile .desc {
+            color: #b9c6d7;
+            font-size: 14px
+        }
+
+        .profile h4 {
+            margin-bottom: 5px
+        }
+
+        .tag {
+            padding: 6px 9px;
+            border-radius: 7px;
+            background: #edf4ff;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 850
+        }
+
+        .method {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 13px
+        }
+
+        .method .card {
+            min-height: 155px
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 8px;
+            border-radius: 7px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            background: #eef5ff;
+            color: var(--blue)
+        }
+
+        .badge.green {
+            background: #edf9f5;
+            color: #16745c
+        }
+
+        .badge.gold {
+            background: #fff7e8;
+            color: #9b6500
+        }
+
+        .badge.gray {
+            background: #f0f2f5;
+            color: #475467
+        }
+
+        .audit {
+            background: #fff8eb;
+            border: 1px solid #f0d8a3;
+            border-radius: 14px;
+            padding: 16px;
+            color: #694c00
+        }
+
+        footer {
+            background: #071321;
+            color: #aeb9ca;
+            padding: 42px 0
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .foot b {
+            color: #fff
+        }
+
+        .foot p {
+            font-size: 12px;
+            max-width: 720px;
+            margin: 0
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .links a {
+            color: #dce6f5;
+            text-decoration: none;
+            font-size: 12px
+        }
+
+        @media (max-width: 950px) {
+            .navlinks {
+                display: none
+            }
+
+            .cards, .method {
+                grid-template-columns:1fr 1fr
+            }
+
+            .twocol, .three, .gridfig {
+                grid-template-columns:1fr
+            }
+
+            .explorer {
+                grid-template-columns:1fr
+            }
+
+            .timeline {
+                grid-template-columns:1fr 1fr
+            }
+
+            .timeline:before {
+                display: none
+            }
+
+            .sectionhead {
+                display: block
+            }
+
+            .sectionhead p {
+                margin-top: 14px
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 18px
+            }
+
+            .hero {
+                padding: 62px 0
+            }
+
+            .cards, .method {
+                grid-template-columns:1fr
+            }
+
+            h2 {
+                font-size: 31px
+            }
+
+            .statement {
+                font-size: 22px
+            }
+
+            .lead {
+                font-size: 17px
+            }
+
+            .row {
+                grid-template-columns:130px 1fr 54px
+            }
+
+            section {
+                padding: 55px 0
+            }
+
+            .foot {
+                display: block
+            }
+
+            .foot p {
+                margin-top: 16px
+            }
+        }
+
+    </style>
+    <title>Referencias | Ingeniería & Futuro del Trabajo</title></head>
+<body>
+<div class="top"></div>
+<nav>
+    <div class="container navin">
+        <a class="brand" href="index.html" aria-label="Ir al inicio">Ingeniería <span>&amp;</span> Futuro del Trabajo</a>
+        <div class="navlinks" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="research.html">Investigación</a>
+            <a href="dashboard.html">Datos</a>
+            <a href="engineer2030.html">Ingeniero 2030</a>
+            <a href="research.html#demanda">Demanda</a>
+            <a href="research.html#competencias">Competencias</a>
+            <a href="methodology.html">Metodología</a>
+            <a href="./references.html">Fuentes</a>
+        </div>
+    </div>
+</nav>
+<header class="hero">
+    <div class="container">
+        <div class="eyebrow">Fuentes · Referencias</div>
+        <h1>Fuentes de la investigación</h1>
+        <p class="lead">Referencias en formato cercano a APA 7, con acceso directo a las fuentes utilizadas en el
+            documento original.</p></div>
+</header>
+<section>
+    <div class="container prose"><h2>IMCO</h2>
+        <ul>
+            <li>Instituto Mexicano para la Competitividad. (2026, 25 de agosto). <em>Compara carreras 2026</em>. <a
+                    href="https://imco.org.mx/compara-carreras-2026/" target="_blank" rel="noopener">Fuente oficial</a>
+            </li>
+            <li>Instituto Mexicano para la Competitividad. (2026). <em>Ingeniería industrial</em>. Compara Carreras. <a
+                    href="https://comparacarreras.imco.org.mx/ingeniería_industrial/" target="_blank" rel="noopener">Ficha
+                oficial</a></li>
+            <li>Instituto Mexicano para la Competitividad. (2026, 10 de agosto). <em>Tendencias educativas y del
+                empleo</em>. <a href="https://imco.org.mx/tendencias-educativas-y-del-empleo/" target="_blank"
+                                rel="noopener">Fuente oficial</a></li>
+            <li>Instituto Mexicano para la Competitividad. (2026). <em>Electrónica, automatización y aplicaciones de la
+                mecánica-eléctrica</em>. Compara Carreras. <a
+                    href="https://comparacarreras.imco.org.mx/electrónica_automatización_y_aplicaciones_de_la_mecánica-eléctrica/"
+                    target="_blank" rel="noopener">Ficha oficial</a></li>
+            <li>Instituto Mexicano para la Competitividad. (2026). <em>Tecnología para la protección del medio
+                ambiente</em>. Compara Carreras. <a
+                    href="https://comparacarreras.imco.org.mx/tecnología_para_la_protección_del_medio_ambiente/"
+                    target="_blank" rel="noopener">Ficha oficial</a></li>
+        </ul>
+        <h2>World Economic Forum</h2>
+        <ul>
+            <li>Leopold, T. (2025, January 8). <em>Future of Jobs Report 2025: The jobs of the future – and the skills
+                you need to get them</em>. World Economic Forum. <a
+                    href="https://www.weforum.org/stories/jobs-and-the-future-of-work/future-of-jobs-report-2025-jobs-of-the-future-and-the-skills-you-need-to-get-them/"
+                    target="_blank" rel="noopener">Artículo</a></li>
+            <li>World Economic Forum. (2025). <em>The Future of Jobs Report 2025</em>. <a
+                    href="https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf" target="_blank"
+                    rel="noopener">Reporte PDF</a></li>
+            <li>World Economic Forum. (2025, January 7). <em>Future of Jobs Report 2025: 78 million new job
+                opportunities by 2030 but urgent upskilling needed to prepare workforces</em>. <a
+                    href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/"
+                    target="_blank" rel="noopener">Comunicado</a></li>
+            <li>World Economic Forum. (2025). <em>3. Skills outlook. The Future of Jobs Report 2025</em>. <a
+                    href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/3-skills-outlook/"
+                    target="_blank" rel="noopener">Skills outlook</a></li>
+            <li>World Economic Forum. (2025). <em>2. Jobs outlook. The Future of Jobs Report 2025</em>. <a
+                    href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/"
+                    target="_blank" rel="noopener">Jobs outlook</a></li>
+            <li>World Economic Forum. (2025). <em>5. Region, economy and industry insights. The Future of Jobs Report
+                2025</em>. <a
+                    href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/5-region-economy-and-industry-insights/"
+                    target="_blank" rel="noopener">Region, economy and industry insights</a></li>
+        </ul>
+        <h2>PwC México</h2>
+        <ul>
+            <li>PwC México. (2026, June 30). <em>La inteligencia artificial está transformando el empleo en México y
+                acelerando la evolución de habilidades: Barómetro de la IA en el mundo laboral 2026 de PwC, edición
+                México</em>. <a href="https://www.pwc.com/mx/es/prensa/barometro-ia-edicion-mexico-2026.html"
+                                target="_blank" rel="noopener">Fuente oficial</a></li>
+        </ul>
+        <h2>U.S. Bureau of Labor Statistics</h2>
+        <ul>
+            <li>Rieley, M. J., &amp; Colato, J. (2026, January 8). <em>Industry and occupational employment projections
+                overview and highlights, 2024–34</em>. Monthly Labor Review. <a
+                    href="https://www.bls.gov/opub/mlr/2026/article/industry-and-occupational-employment-projections-overview.htm"
+                    target="_blank" rel="noopener">Fuente oficial</a></li>
+            <li>U.S. Bureau of Labor Statistics. (2026, August 27). <em>Employment by major occupational group</em>. <a
+                    href="https://www.bls.gov/emp/tables/emp-by-major-occupational-group.htm" target="_blank"
+                    rel="noopener">Tabla oficial</a></li>
+            <li>U.S. Bureau of Labor Statistics. (2026, March 4). <em>Force, mass, mechanisms, and vectors: Employment
+                projections and wages in engineering</em>. <a
+                    href="https://www.bls.gov/opub/ted/2026/force-mass-mechanisms-and-vectors-employment-projections-and-wages-in-engineering.htm"
+                    target="_blank" rel="noopener">Fuente oficial</a></li>
+            <li>U.S. Bureau of Labor Statistics. (2026, August 27). <em>Architecture and engineering occupations</em>.
+                <a href="https://www.bls.gov/ooh/architecture-and-engineering/home.htm" target="_blank" rel="noopener">Occupational
+                    Outlook Handbook</a></li>
+        </ul>
+        <h2>Data México</h2>
+        <ul>
+            <li>Secretaría de Economía. (s. f.). <em>Ingenieros industriales</em>. Data México. <a
+                    href="https://economia.gob.mx/datamexico/es/profile/occupation/ingenieros-industriales"
+                    target="_blank" rel="noopener">Fuente oficial</a></li>
+        </ul>
+        <h2>EL PAÍS México</h2>
+        <ul>
+            <li>González, S. (2026, August 27). <em>Comparador de carreras en México: cuáles son las profesiones mejores
+                y peores pagadas en 2026</em>. EL PAÍS México. <a
+                    href="https://elpais.com/mexico/2026-08-27/comparador-de-carreras-en-mexico-cuales-son-las-profesiones-mejores-y-peores-pagadas-en-2026.html"
+                    target="_blank" rel="noopener">Artículo</a></li>
+        </ul>
+        <div class="audit"><strong>Nota editorial:</strong> las referencias reproducen las fuentes consignadas en el
+            documento de investigación. Antes de una publicación académica formal, conviene hacer una última
+            verificación de fecha, autor, título y URL de cada referencia.
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container foot">
+        <div><b>Ingeniería & Futuro del Trabajo</b>
+            <div>México · 2026–2030</div>
+        </div>
+        <p><strong>Fuentes y Referencias:</strong> <br>Bibliografía utilizada como sustento de la investigación.</p>
+    </div>
+</footer>
+</body>
+</html>

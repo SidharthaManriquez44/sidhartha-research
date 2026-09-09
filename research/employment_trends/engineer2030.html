@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="Proyección de tendencias y oportunidad laboral de la ingeniería en México, 2026–2030: construcción, ponderación e interpretación del índice prospectivo.">
+    <meta name="author" content="Sidhartha Manríquez González">
+    <meta property="og:title" content="Ingeniero 2030 | Ingeniería & Futuro del Trabajo">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --ink: #071321;
+            --navy: #0b1b2e;
+            --blue: #1656a6;
+            --cyan: #0b9eb8;
+            --muted: #667085;
+            --line: #dfe5ec;
+            --paper: #f5f8fb;
+            --white: #fff;
+            --max: 1240px;
+            --r: 18px;
+            --shadow: 0 18px 55px rgba(13, 35, 65, .10)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.6
+        }
+
+        a {
+            color: inherit
+        }
+
+        .top {
+            height: 5px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan))
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: auto;
+            padding: 0 28px
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, .96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .navin {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .brand {
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: -.04em
+        }
+
+        .brand span {
+            color: var(--blue)
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 18px;
+            font-size: 13px;
+            color: #475467
+        }
+
+        .navlinks a {
+            text-decoration: none
+        }
+
+        .navlinks a:hover {
+            color: var(--blue)
+        }
+
+        .hero {
+            padding: 88px 0 72px;
+            background: radial-gradient(circle at 85% 15%, rgba(22, 86, 166, .15), transparent 32%), linear-gradient(180deg, #f4f9ff, #fff 82%);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .eyebrow, .kicker {
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        .eyebrow:before {
+            content: "";
+            display: inline-block;
+            width: 27px;
+            height: 2px;
+            background: var(--cyan);
+            vertical-align: middle;
+            margin-right: 9px
+        }
+
+        h1 {
+            font-size: clamp(46px, 6.8vw, 84px);
+            line-height: .95;
+            letter-spacing: -.065em;
+            max-width: 1100px;
+            margin: 18px 0 25px
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--blue)
+        }
+
+        h2 {
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -.045em;
+            margin: 7px 0 0
+        }
+
+        h3 {
+            line-height: 1.2
+        }
+
+        .lead {
+            max-width: 900px;
+            font-size: 20px;
+            color: #475467
+        }
+
+        .meta, .actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .meta {
+            margin: 26px 0
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 999px;
+            padding: 7px 12px;
+            font-size: 12px;
+            color: #667085
+        }
+
+        section {
+            padding: 76px 0
+        }
+
+        .dark {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .soft {
+            background: var(--paper)
+        }
+
+        .sectionhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 35px;
+            margin-bottom: 30px
+        }
+
+        .sectionhead p {
+            max-width: 600px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .dark .sectionhead p {
+            color: #b9c6d7
+        }
+
+        .statement {
+            font-size: 29px;
+            line-height: 1.3;
+            max-width: 980px;
+            color: #dce7f5;
+            margin: 22px 0 0
+        }
+
+        .statement strong {
+            color: #fff
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .card, .panel {
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            background: #fff;
+            padding: 23px
+        }
+
+        .shadow {
+            box-shadow: var(--shadow)
+        }
+
+        .number {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -.05em;
+            color: var(--blue)
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .twocol {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 22px
+        }
+
+        .three {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .quote {
+            border-left: 4px solid var(--blue);
+            padding: 17px 20px;
+            background: #f5f8fd;
+            border-radius: 0 12px 12px 0;
+            font-size: 19px
+        }
+
+        .prose {
+            max-width: 930px;
+            font-size: 16px
+        }
+
+        .prose h2 {
+            margin-top: 55px
+        }
+
+        .prose p {
+            margin: 14px 0
+        }
+
+        .prose li {
+            margin: 7px 0
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 8px;
+            border-radius: 7px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            background: #eef5ff;
+            color: var(--blue)
+        }
+
+        .badge.green {
+            background: #edf9f5;
+            color: #16745c
+        }
+
+        .badge.gold {
+            background: #fff7e8;
+            color: #9b6500
+        }
+
+        .badge.gray {
+            background: #f0f2f5;
+            color: #475467
+        }
+
+        .formula {
+            display: grid;
+            grid-template-columns:1fr auto 1fr;
+            gap: 15px;
+            align-items: stretch;
+            margin-top: 22px
+        }
+
+        .formula .box {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff;
+            padding: 22px
+        }
+
+        .formula .operator {
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--blue)
+        }
+
+        .formula strong {
+            font-size: 20px
+        }
+
+        .weights {
+            display: grid;
+            gap: 12px;
+            margin-top: 22px
+        }
+
+        .weight {
+            display: grid;
+            grid-template-columns:190px 1fr 60px;
+            gap: 12px;
+            align-items: center
+        }
+
+        .bar {
+            height: 13px;
+            background: #edf1f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            border-radius: 20px
+        }
+
+        .weight b:last-child {
+            text-align: right
+        }
+
+        .scoregrid {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .scorecard {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff;
+            padding: 20px
+        }
+
+        .scorecard .max {
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--blue);
+            letter-spacing: -.05em
+        }
+
+        .criterion {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .rank {
+            display: grid;
+            gap: 10px;
+            margin-top: 22px
+        }
+
+        .rrow {
+            display: grid;
+            grid-template-columns:230px 1fr 55px;
+            gap: 12px;
+            align-items: center;
+            font-size: 13px
+        }
+
+        .rtrack {
+            height: 12px;
+            background: #edf1f6;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .rfill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--cyan));
+            border-radius: 20px
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 14px
+        }
+
+        .audit {
+            background: #fff8eb;
+            border: 1px solid #f0d8a3;
+            border-radius: 14px;
+            padding: 16px;
+            color: #694c00;
+            margin-top: 28px
+        }
+
+        footer {
+            background: #071321;
+            color: #aeb9ca;
+            padding: 42px 0
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .foot b {
+            color: #fff
+        }
+
+        .foot p {
+            font-size: 12px;
+            max-width: 720px;
+            margin: 0
+        }
+
+        .actions {
+            margin-top: 26px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 17px;
+            border-radius: 10px;
+            border: 1px solid var(--blue);
+            font-size: 14px;
+            font-weight: 850;
+            text-decoration: none
+        }
+
+        .primary {
+            background: var(--blue);
+            color: #fff
+        }
+
+        .secondary {
+            background: #fff;
+            color: var(--blue)
+        }
+
+        @media (max-width: 950px) {
+            .navlinks {
+                display: none
+            }
+
+            .cards, .scoregrid {
+                grid-template-columns:1fr 1fr
+            }
+
+            .twocol, .three, .formula {
+                grid-template-columns:1fr
+            }
+
+            .formula .operator {
+                display: none
+            }
+
+            .weight {
+                grid-template-columns:150px 1fr 55px
+            }
+
+            .rrow {
+                grid-template-columns:180px 1fr 55px
+            }
+
+            .sectionhead {
+                display: block
+            }
+
+            .sectionhead p {
+                margin-top: 14px
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 18px
+            }
+
+            .hero {
+                padding: 62px 0
+            }
+
+            .cards, .scoregrid {
+                grid-template-columns:1fr
+            }
+
+            h2 {
+                font-size: 31px
+            }
+
+            .lead {
+                font-size: 17px
+            }
+
+            .weight {
+                grid-template-columns:125px 1fr 48px
+            }
+
+            .rrow {
+                grid-template-columns:130px 1fr 50px
+            }
+
+            section {
+                padding: 55px 0
+            }
+
+            .foot {
+                display: block
+            }
+
+            .foot p {
+                margin-top: 16px
+            }
+        }
+    </style>
+    <title>Ingeniero 2030 | Ingeniería & Futuro del Trabajo</title></head>
+<body>
+<div class="top"></div>
+<nav>
+    <div class="container navin"><a class="brand" href="index.html" aria-label="Ir al inicio">Ingeniería
+        <span>&amp;</span> Futuro del Trabajo</a>
+        <div class="navlinks" aria-label="Navegación principal"><a href="index.html">Inicio</a><a
+                href="research.html">Investigación</a><a href="data.html">Datos</a><a href="./engineer2030.html">Ingeniero
+            2030</a><a href="research.html#demanda">Demanda</a><a href="research.html#competencias">Competencias</a><a
+                href="methodology.html">Metodología</a><a href="references.html">Fuentes</a></div>
+    </div>
+</nav>
+<header class="hero">
+    <div class="container">
+        <div class="eyebrow">Proyección · 2026 → 2030</div>
+        <h1><em>Ingeniero 2030</em>: una proyección de tendencias, no un perfil diseñado.</h1>
+        <p class="lead">Esta página explica cómo se construyó la lectura prospectiva del mercado laboral de ingeniería
+            en México. No diseña perfiles profesionales ni establece una receta de formación: muestra cómo se evaluó el
+            potencial de transformación de nueve áreas de ingeniería.</p>
+        <div class="meta"><span class="pill">IMCO 2026</span><span class="pill">WEF 2025</span><span class="pill">9 áreas comparables</span><span
+                class="pill">Horizonte 2026–2030</span></div>
+    </div>
+</header>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">01 · Qué se está midiendo</div>
+                <h2>De la situación observada a la oportunidad prospectiva</h2></div>
+            <p>El estudio combina una medición de la situación laboral actual con una evaluación prospectiva de las
+                fuerzas que pueden modificar la demanda hacia 2030.</p></div>
+        <div class="formula">
+            <div class="box"><span class="badge">Componente actual</span>
+                <h3>L · Situación laboral</h3>
+                <p>Indicadores comparables de IMCO: ocupación, desempleo, vinculación, informalidad, empleo de calidad y
+                    salario.</p></div>
+            <div class="operator">+</div>
+            <div class="box"><span class="badge green">Componente prospectivo</span>
+                <h3>P · Potencial 2026–2030</h3>
+                <p>Exposición a transformación tecnológica, sectores estratégicos, puestos emergentes y habilidades
+                    futuras.</p></div>
+        </div>
+        <div class="quote" style="margin-top:22px"><strong>I<sub>O</sub> = 0.50 L + 0.50 P</strong><br><span
+                class="small">Índice de Oportunidad Laboral de Ingeniería 2026–2030.</span></div>
+    </div>
+</section>
+<section class="dark">
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">02 · Cómo se construyó P</div>
+                <h2>Cuatro dimensiones explican el potencial prospectivo</h2></div>
+            <p>La segunda mitad del índice no es una estadística oficial de IMCO. Es una construcción analítica del
+                estudio sustentada en la evidencia mexicana y las tendencias reportadas por WEF.</p></div>
+        <div class="weights">
+            <div class="weight"><b>Tecnología</b>
+                <div class="bar"><span style="width:100%"></span></div>
+                <b>40/40</b></div>
+            <div class="weight"><b>Sectores estratégicos</b>
+                <div class="bar"><span style="width:75%"></span></div>
+                <b>30/30</b></div>
+            <div class="weight"><b>Puestos emergentes</b>
+                <div class="bar"><span style="width:50%"></span></div>
+                <b>20/20</b></div>
+            <div class="weight"><b>Habilidades futuras</b>
+                <div class="bar"><span style="width:25%"></span></div>
+                <b>10/10</b></div>
+        </div>
+        <div class="quote" style="margin-top:28px;background:#101f33;border-color:#4f8bd6;color:#fff"><strong>I<sub>potencial</sub>
+            = 0.40(Tecnología) + 0.30(Sectores) + 0.20(Puestos) + 0.10(Habilidades)</strong></div>
+    </div>
+</section>
+<section class="soft">
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">03 · Qué significa cada dimensión</div>
+                <h2>La puntuación no mide “qué carrera es mejor”</h2></div>
+            <p>Cada dimensión captura una señal diferente de transformación. La puntuación final es la suma ponderada de
+                esas cuatro señales.</p></div>
+        <div class="scoregrid">
+            <div class="scorecard"><span class="badge">T · /40</span>
+                <div class="max">40</div>
+                <h3>Transformación tecnológica</h3>
+                <p class="small">IA/datos · automatización/robótica · digitalización de procesos · intensidad
+                    tecnológica futura.</p>
+                <div class="criterion">La matriz del estudio distribuye 10 puntos a cada criterio.</div>
+            </div>
+            <div class="scorecard"><span class="badge green">S · /30</span>
+                <div class="max">30</div>
+                <h3>Sectores estratégicos</h3>
+                <p class="small">Manufactura/nearshoring · energía/infraestructura · digital · transición verde ·
+                    diversificación.</p>
+                <div class="criterion">Máximos: 8 + 6 + 6 + 5 + 5.</div>
+            </div>
+            <div class="scorecard"><span class="badge gold">J · /20</span>
+                <div class="max">20</div>
+                <h3>Puestos emergentes</h3>
+                <p class="small">Mide qué tan directamente cada área conecta con ocupaciones emergentes relevantes.</p>
+                <div class="criterion">La puntuación se asigna sobre una escala máxima de 20.</div>
+            </div>
+            <div class="scorecard"><span class="badge gray">H · /10</span>
+                <div class="max">10</div>
+                <h3>Habilidades futuras</h3>
+                <p class="small">IA y big data · ciberseguridad · alfabetización tecnológica · creatividad · resiliencia
+                    · liderazgo · responsabilidad ambiental.</p>
+                <div class="criterion">La puntuación se asigna sobre una escala máxima de 10.</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">04 · De la dimensión al puntaje</div>
+                <h2>Cómo se ponderó cada área de ingeniería</h2></div>
+            <p>El procedimiento asigna una puntuación a cada dimensión y después las suma para obtener P, manteniendo
+                las escalas máximas definidas por el modelo.</p></div>
+        <div class="panel">
+            <div class="quote"><strong>P<sub>i</sub> = 0.40T<sub>i</sub> + 0.30S<sub>i</sub> + 0.20J<sub>i</sub> + 0.10H<sub>i</sub></strong>
+            </div>
+            <p>Por ejemplo, Electrónica / Automatización obtiene <strong>T=38, S=28, J=19 y H=9</strong>, por lo que:
+            </p>
+            <div class="quote"><strong>P = 38 + 28 + 19 + 9 = 94/100</strong></div>
+            <p class="note">En esta representación, T, S, J y H ya son puntuaciones sobre sus máximos respectivos. La
+                matriz completa y la evidencia utilizada para cada puntuación se encuentra en la investigación.</p>
+        </div>
+        <div class="actions"><a class="btn primary" href="research.html#proyeccion">Ver matriz y evidencia completa
+            →</a><a class="btn secondary" href="methodology.html">Revisar metodología →</a></div>
+    </div>
+</section>
+<section class="soft">
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">05 · Resultado prospectivo</div>
+                <h2>Las áreas no se ordenan por una sola variable</h2></div>
+            <p>El ranking resume la exposición combinada de cada área a las cuatro dimensiones prospectivas.</p></div>
+        <div class="rank">
+            <div class="rrow"><b>Electrónica / Automatización</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:94%"></div>
+                </div>
+                <b>94</b></div>
+            <div class="rrow"><b>Industrial</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:91%"></div>
+                </div>
+                <b>91</b></div>
+            <div class="rrow"><b>Software</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:90%"></div>
+                </div>
+                <b>90</b></div>
+            <div class="rrow"><b>Ciencias Computacionales</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:86%"></div>
+                </div>
+                <b>86</b></div>
+            <div class="rrow"><b>Mecánica</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:82%"></div>
+                </div>
+                <b>82</b></div>
+            <div class="rrow"><b>Ambiental / Sostenibilidad</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:80%"></div>
+                </div>
+                <b>80</b></div>
+            <div class="rrow"><b>Química</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:78%"></div>
+                </div>
+                <b>78</b></div>
+            <div class="rrow"><b>Electricidad / Energía</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:78%"></div>
+                </div>
+                <b>78</b></div>
+            <div class="rrow"><b>Civil / Construcción</b>
+                <div class="rtrack">
+                    <div class="rfill" style="width:76%"></div>
+                </div>
+                <b>76</b></div>
+        </div>
+        <p class="note">Este ranking expresa potencial prospectivo dentro del modelo; no representa probabilidad
+            individual de conseguir empleo ni predice el número de vacantes.</p></div>
+</section>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">06 · Cómo debe leerse</div>
+                <h2>Una proyección de tendencias, no un diseño de perfiles</h2></div>
+            <p>El resultado sirve para comparar áreas de ingeniería frente a las transformaciones que pueden generar
+                demanda. No prescribe una trayectoria profesional.</p></div>
+        <div class="twocol">
+            <div class="panel"><span class="badge">Sí permite</span>
+                <h3>Identificar señales de transformación</h3>
+                <ul>
+                    <li>Qué áreas presentan mayor exposición tecnológica.</li>
+                    <li>Qué sectores estratégicos concentran oportunidades.</li>
+                    <li>Qué ocupaciones emergentes se relacionan con cada área.</li>
+                    <li>Qué habilidades están ganando importancia.</li>
+                </ul>
+            </div>
+            <div class="panel"><span class="badge gray">No permite</span>
+                <h3>Hacer predicciones individuales</h3>
+                <ul>
+                    <li>Garantizar empleo a una persona.</li>
+                    <li>Decir qué carrera es “mejor” en términos absolutos.</li>
+                    <li>Diseñar un perfil profesional obligatorio.</li>
+                    <li>Convertir una puntuación prospectiva en una probabilidad.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="audit"><strong>Nota metodológica:</strong> la evidencia base combina IMCO 2026 para el contexto
+            laboral mexicano y WEF 2025 para transformación tecnológica, puestos y habilidades. El componente
+            prospectivo es una construcción analítica del estudio. El propio documento señala que el índice representa
+            la combinación entre posición laboral actual y exposición a transformaciones que probablemente generarán
+            demanda hacia 2030.
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container foot">
+        <div><b>Ingeniería & Futuro del Trabajo</b>
+            <div>México · 2026–2030</div>
+        </div>
+        <p><strong>Ingeniero 2030</strong><br> Análisis prospectivo de la ingeniería y su evolución ante la
+            transformación tecnológica, los sectores estratégicos y las nuevas demandas profesionales.</p></div>
+</footer>
+</body>
+</html>

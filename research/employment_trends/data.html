@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+          content="Investigación sobre la transformación del mercado laboral de la ingeniería en México, 2026–2030.">
+    <title>Datos | Ingeniería y Futuro del Trabajo</title>
+    <style>
+        :root {
+            --ink: #0b1220;
+            --muted: #667085;
+            --line: #e6eaf0;
+            --paper: #f7f9fc;
+            --blue: #174ea6;
+            --cyan: #0ea5c7;
+            --white: #fff;
+            --max: 1180px;
+            --radius: 18px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: #fff;
+            line-height: 1.65
+        }
+
+        a {
+            color: inherit
+        }
+
+        .top {
+            height: 5px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan))
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, .94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .navin {
+            max-width: var(--max);
+            margin: auto;
+            padding: 0 28px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px
+        }
+
+        .brand {
+            font-weight: 850;
+            letter-spacing: -.035em;
+            text-decoration: none;
+            font-size: 17px
+        }
+
+        .brand span {
+            color: var(--blue)
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 21px;
+            font-size: 13px;
+            color: #475467
+        }
+
+        .navlinks a {
+            text-decoration: none
+        }
+
+        .navlinks a:hover {
+            color: var(--blue)
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: auto;
+            padding: 0 28px
+        }
+
+        .hero {
+            padding: 92px 0 78px;
+            background: radial-gradient(circle at 85% 18%, rgba(23, 78, 166, .12), transparent 32%), linear-gradient(180deg, #f7fbff, #fff 78%);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .14em;
+            text-transform: uppercase
+        }
+
+        .eyebrow:before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 2px;
+            background: var(--cyan);
+            vertical-align: middle;
+            margin-right: 9px
+        }
+
+        h1 {
+            font-size: clamp(45px, 6.3vw, 78px);
+            line-height: .98;
+            letter-spacing: -.06em;
+            max-width: 1000px;
+            margin: 18px 0 25px
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--blue)
+        }
+
+        .lead {
+            max-width: 820px;
+            font-size: 20px;
+            color: #475467
+        }
+
+        .meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 27px 0
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 999px;
+            padding: 7px 12px;
+            font-size: 12px;
+            color: #667085
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            padding: 12px 17px;
+            border-radius: 10px;
+            border: 1px solid var(--blue);
+            font-size: 14px;
+            font-weight: 800;
+            text-decoration: none
+        }
+
+        .primary {
+            background: var(--blue);
+            color: #fff
+        }
+
+        .secondary {
+            background: #fff;
+            color: var(--blue)
+        }
+
+        section {
+            padding: 74px 0
+        }
+
+        .dark {
+            background: var(--ink);
+            color: #fff
+        }
+
+        .soft {
+            background: var(--paper)
+        }
+
+        .kicker {
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 850;
+            text-transform: uppercase;
+            letter-spacing: .14em
+        }
+
+        .dark .kicker {
+            color: #83d9eb
+        }
+
+        .sectionhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 35px;
+            margin-bottom: 30px
+        }
+
+        .sectionhead p {
+            max-width: 500px;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .dark .sectionhead p {
+            color: #b7c3d6
+        }
+
+        h2 {
+            font-size: 38px;
+            line-height: 1.08;
+            letter-spacing: -.04em;
+            margin: 7px 0 0
+        }
+
+        h3 {
+            line-height: 1.2
+        }
+
+        .statement {
+            font-size: 29px;
+            line-height: 1.3;
+            max-width: 900px;
+            color: #dce6f5;
+            margin: 22px 0 0
+        }
+
+        .statement strong {
+            color: #fff
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 23px;
+            background: #fff
+        }
+
+        .number {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -.05em;
+            color: var(--blue)
+        }
+
+        .small {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .card h3 {
+            font-size: 15px;
+            margin: 14px 0 0
+        }
+
+        .figure {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: #fff;
+            padding: 16px;
+            margin: 24px 0;
+            overflow: hidden
+        }
+
+        .figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 11px
+        }
+
+        .caption {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 12px 5px 2px
+        }
+
+        .twocol {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 24px
+        }
+
+        .three {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .prose {
+            max-width: 860px;
+            font-size: 17px
+        }
+
+        .prose h2 {
+            margin-top: 55px
+        }
+
+        .prose h3 {
+            margin-top: 35px
+        }
+
+        .prose p {
+            margin: 15px 0
+        }
+
+        .prose ul {
+            padding-left: 22px
+        }
+
+        .prose li {
+            margin: 7px 0
+        }
+
+        .highlight {
+            border-left: 4px solid var(--blue);
+            padding: 15px 20px;
+            background: #f5f8fd;
+            border-radius: 0 12px 12px 0;
+            margin: 25px 0
+        }
+
+        .highlight strong {
+            color: var(--blue)
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 14px
+        }
+
+        .metric {
+            padding: 20px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff
+        }
+
+        .metric b {
+            font-size: 26px;
+            color: var(--blue);
+            display: block
+        }
+
+        .metric span {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow: hidden
+        }
+
+        th, td {
+            padding: 13px 14px;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            font-size: 13px
+        }
+
+        th {
+            background: #f3f6fa;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .05em
+        }
+
+        tr:last-child td {
+            border-bottom: 0
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 9px;
+            border-radius: 7px;
+            background: #edf4ff;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 850
+        }
+
+        .jobgrid {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .job {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 21px;
+            background: #fff
+        }
+
+        .job h3 {
+            margin: 0;
+            font-size: 17px
+        }
+
+        .job p {
+            color: var(--muted);
+            font-size: 13px;
+            margin: 8px 0 0
+        }
+
+        .sources {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 15px
+        }
+
+        .source {
+            border-left: 3px solid var(--blue);
+            padding: 5px 0 5px 16px
+        }
+
+        .source b {
+            display: block
+        }
+
+        .source span {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        footer {
+            background: #0b1220;
+            color: #aeb9ca;
+            padding: 40px 0
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .foot b {
+            color: #fff
+        }
+
+        .foot p {
+            font-size: 12px;
+            max-width: 650px;
+            margin: 0
+        }
+
+        @media (max-width: 900px) {
+            .navlinks {
+                display: none
+            }
+
+            .cards {
+                grid-template-columns:1fr 1fr
+            }
+
+            .twocol, .three {
+                grid-template-columns:1fr
+            }
+
+            .jobgrid {
+                grid-template-columns:1fr 1fr
+            }
+
+            .sectionhead {
+                display: block
+            }
+
+            .sectionhead p {
+                margin-top: 14px
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 18px
+            }
+
+            .hero {
+                padding: 62px 0
+            }
+
+            .cards, .metrics, .jobgrid {
+                grid-template-columns:1fr
+            }
+
+            h2 {
+                font-size: 31px
+            }
+
+            .statement {
+                font-size: 22px
+            }
+
+            .lead {
+                font-size: 17px
+            }
+
+            section {
+                padding: 55px 0
+            }
+        }
+
+        /* Interactive research figures */
+        .figure {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            margin: 3rem auto 3.5rem;
+        }
+
+        .figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            cursor: zoom-in;
+            border-radius: 8px;
+            transition: transform .22s ease, box-shadow .22s ease;
+        }
+
+        .figure:hover img {
+            box-shadow: 0 14px 34px rgba(13, 35, 65, .14);
+        }
+
+        .figure:has(img[onclick])::after {
+            content: "↗";
+            position: absolute;
+            right: 22px;
+            top: 22px;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(7, 19, 33, .78);
+            color: #fff;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity .2s ease, transform .2s ease;
+            pointer-events: none;
+        }
+
+        .figure::after {
+            content: "↗";
+            position: absolute;
+            right: 22px;
+            top: 22px;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(7, 19, 33, .78);
+            color: #fff;
+            font-size: 18px;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity .2s ease, transform .2s ease;
+            pointer-events: none;
+        }
+
+        .figure:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            background: rgba(4, 12, 24, .88);
+            backdrop-filter: blur(8px);
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox.open img {
+            animation: figureZoom .25s ease-out;
+        }
+
+        @keyframes figureZoom {
+            from {
+                opacity: 0;
+                transform: scale(.92);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .lightbox img {
+            display: block;
+            width: auto;
+            max-width: 94vw;
+            max-height: 92vh;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, .45);
+            background: #fff;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 18px;
+            right: 22px;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, .28);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .12);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .lightbox-title {
+            position: fixed;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            max-width: 90vw;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(7, 19, 33, .78);
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .figure {
+                max-width: 100%;
+                margin: 1.5rem auto;
+            }
+
+            .figure img {
+                width: 100%;
+            }
+
+            .lightbox {
+                padding: 14px;
+            }
+
+            .lightbox img {
+                max-width: 96vw;
+                max-height: 82vh;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+
+            .lightbox-title {
+                bottom: 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="top"></div>
+<nav>
+    <div class="container navin">
+        <a class="brand" href="index.html" aria-label="Ir al inicio">Ingeniería <span>&amp;</span> Futuro del Trabajo</a>
+        <div class="navlinks" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="research.html">Investigación</a>
+            <a href="dashboard.html">Datos</a>
+            <a href="engineer2030.html">Ingeniero 2030</a>
+            <a href="research.html#demanda">Demanda</a>
+            <a href="research.html#competencias">Competencias</a>
+            <a href="methodology.html">Metodología</a>
+            <a href="references.html">Fuentes</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <div class="eyebrow">Datos</div>
+        <h1>Ingeniería y tecnología en México</h1>
+        <p class="lead">Indicadores clave del estudio: ocupación, vinculación, salario, empleo de calidad y demanda
+            tecnológica.</p></div>
+</header>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">Empleabilidad</div>
+                <h2>Porcentaje de ocupación</h2></div>
+            <p>Los datos del estudio muestran tasas de ocupación superiores al 90% en las áreas comparadas.</p></div>
+        <table>
+            <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Área</th>
+                <th>Ocupación</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mecánica</td>
+                <td>97.5%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Electricidad / Energía</td>
+                <td>97.2%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Software</td>
+                <td>96.8%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Electrónica / Automatización</td>
+                <td>96.7%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Civil</td>
+                <td>96.0%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Química</td>
+                <td>96.0%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Industrial</td>
+                <td>95.7%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Computación</td>
+                <td>94.8%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Ambiental</td>
+                <td>91.1%</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="figure"><img src="assets/figures/investigacion-16.webp" alt="Empleabilidad"></div>
+    </div>
+</section>
+<section class="soft">
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">Vinculación</div>
+                <h2>¿El empleo corresponde al campo estudiado?</h2></div>
+            <p>La vinculación es una dimensión distinta de la ocupación y cambia sustancialmente entre áreas.</p></div>
+        <div class="figure"><img src="assets/figures/investigacion-17.webp" alt="Vinculación laboral"></div>
+        <div class="sectionhead" style="margin-top:55px">
+            <div>
+                <div class="kicker">Salario</div>
+                <h2>Salario mensual bruto promedio</h2></div>
+        </div>
+        <div class="figure"><img src="assets/figures/investigacion-18.webp" alt="Salario promedio"></div>
+        <div class="sectionhead" style="margin-top:55px">
+            <div>
+                <div class="kicker">Calidad del empleo</div>
+                <h2>Empleo de calidad</h2></div>
+        </div>
+        <div class="figure"><img src="assets/figures/investigacion-19.webp" alt="Empleo de calidad"></div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="sectionhead">
+            <div>
+                <div class="kicker">Consolidado</div>
+                <h2>Panorama de ingeniería en México</h2></div>
+            <p>Vista integral de los indicadores utilizados para comparar las áreas.</p></div>
+        <div class="figure"><img src="assets/figures/investigacion-15.webp" alt="Consolidado de ingeniería"></div>
+        <div class="figure"><img src="assets/figures/investigacion-20.webp" alt="Puestos tecnologías tendencias"></div>
+    </div>
+</section>
+
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gráfico ampliado">
+    <button class="lightbox-close" type="button" aria-label="Cerrar gráfico">×</button>
+    <img id="lightboxImage" alt="">
+    <div class="lightbox-title" id="lightboxTitle"></div>
+</div>
+<script>
+    (function () {
+        const box = document.getElementById('lightbox');
+        const out = document.getElementById('lightboxImage');
+        const title = document.getElementById('lightboxTitle');
+        if (!box || !out) return;
+        document.querySelectorAll('.figure img').forEach(img => {
+            img.setAttribute('tabindex', '0');
+            img.setAttribute('role', 'button');
+            img.setAttribute('aria-label', 'Ampliar gráfico: ' + (img.alt || 'gráfico'));
+            const open = () => {
+                out.src = img.currentSrc || img.src;
+                out.alt = img.alt || 'Gráfico ampliado';
+                title.textContent = img.alt || 'Gráfico de la investigación';
+                box.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            };
+            img.addEventListener('click', open);
+            img.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    open();
+                }
+            });
+        });
+        const close = () => {
+            box.classList.remove('open');
+            out.removeAttribute('src');
+            document.body.style.overflow = '';
+        };
+        box.addEventListener('click', e => {
+            if (e.target === box) close();
+        });
+        box.querySelector('.lightbox-close').addEventListener('click', close);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && box.classList.contains('open')) close();
+        });
+    })();
+</script>
+<footer>
+    <div class="container foot">
+        <div><b>Ingeniería & Futuro del Trabajo</b>
+            <div>México · 2026–2030</div>
+        </div>
+        <p>Investigación de <strong>Sidhartha Manríquez González</strong>. <br>Análisis de datos y evidencia
+            provenientes de fuentes institucionales y bibliográficas. Las cifras conservan el contexto y las referencias
+            de sus fuentes originales.</p></div>
+</footer>
+</body>
+</html>
