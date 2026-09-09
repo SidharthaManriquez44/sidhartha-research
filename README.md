@@ -44,26 +44,11 @@ Un sistema computacional puede necesitar validación por especialistas del domin
 
 Por ello, los trabajos publicados aquí buscan separar y hacer visibles distintas capas del proceso de investigación:
 
-```text
-Problema
-   ↓
-Contexto
-   ↓
-Evidencia
-   ↓
-Modelo
-   ↓
-Experimentación
-   ↓
-Resultados
-   ↓
-Validación
-   ↓
-Discusión
-   ↓
-Evolución
 
-```
+<p align="center">
+  <img src="assets/research_process.png" alt="Research methodology" width="800">
+</p>
+
 No todos los trabajos recorren exactamente las mismas etapas.
 La metodología se adapta al problema, al tipo de evidencia disponible y al estado de desarrollo de cada trabajo.
 
