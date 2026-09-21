@@ -46,7 +46,7 @@ Por ello, los trabajos publicados aquí buscan separar y hacer visibles distinta
 
 
 <p align="center">
-  <img src="assets/research_process.png" alt="Research methodology" width="800">
+  <img src="assets/images/research_process.png" alt="Research methodology" width="800">
 </p>
 
 No todos los trabajos recorren exactamente las mismas etapas.
