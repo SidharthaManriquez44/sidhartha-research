@@ -1,0 +1,54 @@
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+*.pyc
+
+# Virtual enviroment
+venv/
+.venv/
+
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.test.example
+
+# PyCharm
+.idea/
+*.iml
+
+# Pytest - Coverage reports
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Wrappers
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Files local tests
+notebooks/
+*.ipynb
+
+data/
+*.csv
+*.parquet
+*.json
+
+# VSCode
+.vscode/
+
+# PyCharm support libs
+*-pycharm-support-libs/

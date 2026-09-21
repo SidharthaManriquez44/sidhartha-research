@@ -1,0 +1,77 @@
+[project]
+name = "emergency-simualtion"
+version = "0.1.0"
+description = "Optimization of the Care Process in the Emergency Department of a Private Tertiary-Care Hospital"
+requires-python = ">=3.10"
+
+dependencies = [
+    "sqlfluff-4.2.1",
+
+
+]
+
+[project.optional-dependencies]
+test = [
+    "psycopg-binary-3.3.5",
+    "pytest-asyncio-1.4.0",
+    "pytest-cov-7.1.0",
+    "pytest-9.1.1",
+    "python-dotenv-1.2.3",
+    "sqlfluff-4.2.1",
+    "mypy-2.3.1",
+    "ruff-0.16.7",
+
+]
+
+dev = [
+   "sqlfluff-4.2.1",
+    "mypy-2.3.1",
+    "ruff-0.16.7",
+]
+
+[tool.sqlfluff.core]
+dialect = "postgres"
+large_file_skip_byte_limit = 100000
+
+[tool.sqlfluff.rules.references.keywords]
+ignore_words = "name,content,location,configuration"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "I",
+    "UP",
+    "B",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "platform: Platform validation tests",
+    "spark: Spark validation tests",
+]
+
+[tool.mypy]
+strict = true
+warn_unused_ignores = true
+disallow_any_generics = true
+show_error_codes = true
+pretty = true
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
