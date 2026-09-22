@@ -102,7 +102,7 @@ const translations = {
         "nav.work": "Research",
         "nav.areas": "Areas",
         "nav.collaboration": "Collaboration",
-        "nav.about": "About",
+        "nav.about": "About me",
         "nav.github": "GitHub",
 
         "hero.eyebrow": "Research Lab · Applied Research",
