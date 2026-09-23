@@ -93,6 +93,7 @@ const translations = {
         "about.eyebrow": "Sobre el autor",
         "about.description": "Ingeniero especialista en datos, sistemas complejos, simulación y tecnología.",
         "about.site": "Este sitio documenta el trabajo de investigación y los sistemas que surgen de ese proceso, haciendo accesibles sus ideas y resultados para personas que no necesariamente trabajan con código.",
+        "about.button": "TRABAJA CONMIGO →",
 
         "footer.description": "Investigación aplicada · Ingeniería · Datos · Sistemas"
     },
@@ -186,6 +187,7 @@ const translations = {
         "about.eyebrow": "About the Author",
         "about.description": "Engineer specializing in data, complex systems, simulation, and technology.",
         "about.site": "This site documents research work and the systems that emerge from that process, making its ideas and results accessible to people who do not necessarily work with code.",
+        "about.button": "WORK WITH ME →",
 
         "footer.description": "Applied Research · Engineering · Data · Systems"
     }
