@@ -135,10 +135,10 @@ const translations = {
         "project2.action": "REVIEW →",
 
         "project3.meta": "Research · Documentary · Participation",
-        "project3.title": "Between Marigolds and Pumpkins",
-        "project3.description": "Research on practices, perceptions, and cultural transformations surrounding Day of the Dead and Halloween in contemporary Mexico.",
+        "project3.title": "Comparative analysis of artificial intelligence tools",
+        "project3.description": "Research into the incorporation of artificial intelligence (AI) tools into information analysis processes has transformed the way organizations process documents, interpret data, and generate conclusions for decision-making.",
         "project3.status": "● OPEN RESEARCH · DATA COLLECTION",
-        "project3.action": "PARTICIPATE →",
+        "project3.action": "EXPLORE →",
 
         "project4.meta": "Essay · Finance · Quantitative Analysis",
         "project4.title": "Hedge Fund Research",
