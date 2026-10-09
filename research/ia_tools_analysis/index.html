@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Investigación comparativa sobre herramientas de inteligencia artificial para analizar documentos y datos con trazabilidad y auditoría.">
+    <meta name="theme-color" content="#101f2b">
+    <title>IA bajo evidencia | Investigación sobre análisis documental</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script src="assets/js/main-script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar" id="inicio">
+    <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="#inicio">
+            <span class="brand-mark" aria-hidden="true">∴</span>
+            IA bajo evidencia
+        </a>
+        <div class="navlinks" id="navlinks">
+            <a href="#enfoque">Enfoque</a>
+            <a href="#metodo">Método</a>
+            <a href="#herramientas">Herramientas</a>
+            <a href="#hallazgos">Hallazgos</a>
+            <a href="#fuentes">Fuentes</a>
+            <button class="language-toggle"
+                    type="button" id="language-toggle"
+                    aria-label="Switch language to English"
+                    aria-pressed="false">
+                English
+            </button>
+        </div>
+    </nav>
+</header>
+<section class="hero" aria-labelledby="titulo">
+    <div class="hero-inner">
+        <div>
+            <div class="eyebrow">Investigación · Inteligencia artificial · Análisis documental</div>
+            <h1 id="titulo">¿Podemos confiar en lo que
+                <em>analiza</em>
+                la IA?
+            </h1>
+            <p class="hero-copy">Una comparación de siete herramientas para explorar cómo procesan documentos, analizan
+                datos y permiten verificar sus resultados. La pregunta central no es solo qué pueden hacer, sino qué
+                evidencia dejan para comprobarlo.
+            </p>
+            <div class="hero-actions">
+                <a class="button primary" href="#enfoque">Explorar la investigación
+                    <span aria-hidden="true">↓</span>
+                </a>
+                <a class="button ghost" href="#matriz">Ver matriz comparativa</a>
+            </div>
+            <div class="hero-meta">
+                <div><strong>7</strong> herramientas analizadas</div>
+                <div><strong>3</strong> dimensiones de evaluación</div>
+                <div><strong>1</strong> pregunta de confianza</div>
+            </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+            <div class="orbit">
+                <i class="orbit-dot dot-a"></i>
+                <i class="orbit-dot dot-b"></i>
+            </div>
+            <div class="core">◎</div>
+            <span class="float-label label-a">evidencia ↗</span>
+            <span class="float-label label-b">fuentes originales</span>
+            <span class="float-label label-c">verificación independiente</span>
+        </div>
+    </div>
+</section>
+<main id="contenido">
+    <section class="section" id="enfoque">
+        <div class="section-heading">
+            <div class="kicker">01 / Resumen</div>
+            <div><h2>Más que respuestas convincentes</h2>
+                <p class="section-intro">La IA puede leer archivos, realizar cálculos y producir informes. Pero una
+                    respuesta clara no demuestra por sí sola que los datos se extrajeron bien, que el cálculo sea
+                    pertinente o que la conclusión esté respaldada.
+                </p>
+            </div>
+        </div>
+        <div class="abstract">
+            <div class="abstract-copy">
+                <p>Esta investigación compara siete soluciones de inteligencia artificial
+                aplicadas al análisis de documentos, datos y consultas. El análisis se organiza en tres dimensiones:
+                ingestión, capacidad de análisis y auditoría.
+                </p>
+                <p>El trabajo distingue las funciones descritas por los proveedores de aquello que requeriría una prueba
+                    independiente. Por ello, la comparación sirve para reconocer capacidades y límites documentados; no
+                    constituye una certificación de precisión ni un benchmark experimental.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">Evaluación documental</span>
+                    <span class="pill">Trazabilidad</span>
+                    <span class="pill">Reproducibilidad</span>
+                    <span class="pill">Supervisión humana</span>
+                </div>
+            </div>
+            <aside class="abstract-quote">
+                <div class="quote-mark">“</div>
+                <blockquote>La confianza se construye mostrando de dónde viene una respuesta y cómo se obtuvo.
+                </blockquote>
+                <small>Planteamiento central de la investigación</small>
+            </aside>
+        </div>
+    </section>
+    <section class="section" aria-labelledby="dim-title">
+        <div class="section-heading">
+            <div class="kicker">02 / Marco de evaluación</div>
+            <div>
+                <h2 id="dim-title">Tres capacidades, una cadena de evidencia</h2>
+                <p class="section-intro">Las etapas se conectan: un error al extraer una cifra puede propagarse al
+                    cálculo y quedar oculto si no se guardan las fuentes y los pasos del análisis.
+                </p>
+            </div>
+        </div>
+        <div class="dimensions">
+            <article class="dimension" data-num="01">
+                <div class="dimension-icon" aria-hidden="true">▤</div>
+                <h3>Ingestión</h3>
+                <p>¿Convierte archivos heterogéneos en información utilizable, conservando texto, tablas, unidades y
+                    contexto?</p>
+            </article>
+            <article class="dimension" data-num="02">
+                <div class="dimension-icon" aria-hidden="true">⌘</div>
+                <h3>Análisis</h3>
+                <p>¿Permite revisar los cálculos, consultas o transformaciones y repetirlos con los mismos datos?</p>
+            </article>
+            <article class="dimension" data-num="03">
+                <div class="dimension-icon" aria-hidden="true">⌕</div>
+                <h3>Auditoría</h3>
+                <p>¿Puede otra persona reconstruir el resultado desde las fuentes originales y detectar
+                    discrepancias?</p>
+            </article>
+        </div>
+        <div class="callout">
+            <strong>Distinción importante:</strong> leer correctamente un documento, calcular
+            correctamente sobre sus datos y llegar a una interpretación válida son logros distintos. Cada etapa necesita
+            su propia verificación.
+        </div>
+    </section>
+    <section class="section" aria-labelledby="preguntas-title">
+        <div class="section-heading">
+            <div class="kicker">03 / Preguntas</div>
+            <div><h2 id="preguntas-title">La investigación pregunta</h2>
+                <p class="section-intro">Estas preguntas guían la comparación y ayudan a mantener criterios comunes
+                    entre herramientas.</p>
+            </div>
+        </div>
+        <div class="questions">
+            <article class="question"><span>Pregunta 01 · Ingestión</span>
+                <p>¿Qué tan eficazmente procesa documentos heterogéneos sin perder la integridad de los datos ni el
+                    contexto necesario?</p>
+            </article>
+            <article class="question"><span>Pregunta 02 · Análisis</span>
+                <p>¿Qué mecanismos ofrece para comprobar cálculos e interpretaciones producidos a partir de los
+                    datos?</p>
+            </article>
+            <article class="question">
+                <span>Pregunta 03 · Auditoría</span>
+                <p>¿Puede un tercero reconstruir y verificar los resultados usando las fuentes y los procedimientos
+                    conservados?</p>
+            </article>
+        </div>
+    </section>
+    <section class="section" id="metodo">
+        <div class="section-heading">
+            <div class="kicker">04 / Metodología</div>
+            <div><h2>Comparar con criterios explícitos</h2>
+                <p class="section-intro">El documento presenta una evaluación documental y técnica de funciones
+                    descritas en fuentes públicas. Para comprobar desempeño real, propone una segunda fase de pruebas
+                    con datos de referencia.</p>
+            </div>
+        </div>
+        <div class="method-layout">
+            <aside class="method-note">
+                <span class="badge">Precisión metodológica</span>
+                <h3>Qué puede concluirse</h3>
+                <p>La documentación permite describir funciones declaradas e identificar aspectos que faltan por
+                    validar. Sin ensayos reproducibles con archivos comparables, no permite afirmar qué herramienta es
+                    más precisa ni cuál es superior en general.</p>
+            </aside>
+            <ol class="steps">
+                <li>
+                    <strong>Definir criterios antes de probar</strong>
+                    <p>Establecer qué cuenta como extracción correcta, error numérico, referencia verificable y
+                        resultado reproducible.</p>
+                </li>
+                <li><strong>Usar los mismos archivos y preguntas</strong>
+                    <p>Incluir PDF digital y escaneado, hojas de cálculo, datos tabulares, informes narrativos y tablas
+                        complejas.</p>
+                </li>
+                <li><strong>Contrastar con resultados de referencia</strong>
+                    <p>Incorporar duplicados, inconsistencias y encabezados ambiguos deliberados para medir detección de
+                        errores.</p>
+                </li>
+                <li><strong>Verificar por separado</strong>
+                    <p>Comparar extracción, cálculos y conclusiones con las fuentes originales y controles
+                        independientes.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section class="section" id="herramientas">
+        <div class="section-heading">
+            <div class="kicker">05 / Alcance comparativo</div>
+            <div>
+                <h2>Siete herramientas, distintos propósitos</h2>
+                <p class="section-intro">La selección reúne asistentes de análisis de archivos, plataformas orientadas a
+                    datos y soluciones centradas en analítica gobernada o consultas de bases de datos.</p>
+            </div>
+        </div>
+        <div class="tool-grid">
+            <article class="tool-card">
+                <span class="index">01 / MULTIFUENTE</span>
+                <h3>Energent.ai</h3>
+                <p>Analítica con IA para integrar archivos heterogéneos y generar resultados de análisis.</p>
+                <span class="tool-tag">Documentos y datos</span>
+            </article>
+            <article class="tool-card">
+                <span class="index">02 / CONVERSACIONAL</span>
+                <h3>Julius AI</h3>
+                <p>Interfaz de conversación para explorar y analizar datos, con resultados que requieren
+                    comprobación.
+                </p>
+                <span class="tool-tag">Análisis de datos</span>
+            </article>
+            <article class="tool-card">
+                <span class="index">03 / ANALÍTICA GOBERNADA</span>
+                <h3>Tableau Pulse</h3>
+                <p>Analítica de métricas y explicaciones vinculadas a fuentes de datos gobernadas.</p>
+                <span class="tool-tag">Métricas y BI</span>
+            </article>
+            <article class="tool-card">
+                <span class="index">04 / ARCHIVOS</span>
+                <h3>Powerdrill AI</h3>
+                <p>Procesamiento y consulta conversacional de archivos, sujeto a validación de extracción.</p>
+                <span class="tool-tag">Archivos y datos</span>
+            </article>
+            <article class="tool-card">
+                <span class="index">05 / BASES DE DATOS</span>
+                <h3>BlazeSQL</h3>
+                <p>Generación y ejecución de consultas SQL; los documentos suelen requerir preparación previa.</p>
+                <span class="tool-tag">Consultas SQL</span>
+            </article>
+            <article class="tool-card">
+                <span class="index">06 / CÓDIGO</span>
+                <h3>ChatGPT · análisis de datos</h3>
+                <p>Análisis de archivos con ejecución computacional; la extracción y las conclusiones deben
+                    revisarse.</p>
+                <span class="tool-tag">Python y archivos</span>
+            </article>
+            <article class="tool-card">
+                <span class="index">07 / CÓDIGO</span>
+                <h3>Claude · análisis y código</h3>
+                <p>Procesamiento de documentos y ejecución de código, con trazabilidad según el flujo utilizado.</p>
+                <span class="tool-tag">Documentos y código</span>
+            </article>
+        </div>
+    </section>
+    <section class="section" id="matriz">
+        <div class="section-heading">
+            <div class="kicker">06 / Síntesis</div>
+            <div><h2>Matriz de capacidades</h2>
+                <p class="section-intro">Resumen cualitativo del análisis del ensayo. La clasificación describe el
+                    alcance documentado y señala dónde el desempeño debe comprobarse con pruebas específicas.</p>
+            </div>
+        </div>
+        <div class="matrix-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>Herramienta</th>
+                    <th>Ingestión</th>
+                    <th>Análisis</th>
+                    <th>Auditoría</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Energent.ai</td>
+                    <td>Fuentes heterogéneas declaradas; precisión pendiente de validación independiente.</td>
+                    <td>Enfoque de análisis publicado; comprobar reproducibilidad.</td>
+                    <td>Publica una metodología; evaluar independencia en la práctica.</td>
+                </tr>
+                <tr>
+                    <td>Julius AI</td>
+                    <td>Archivos y hojas de cálculo documentados; probar extracción compleja.</td>
+                    <td>Análisis conversacional; añadir controles de validación.</td>
+                    <td>No presumir auditoría integral sin verificar funciones concretas.</td>
+                </tr>
+                <tr>
+                    <td>Tableau Pulse</td>
+                    <td>Fuentes analíticas y métricas gobernadas; no es una herramienta generalista de OCR.</td>
+                    <td>Análisis de métricas y explicaciones contextualizadas.</td>
+                    <td>Evaluar configuración y reconstrucción independiente.</td>
+                </tr>
+                <tr>
+                    <td>Powerdrill AI</td>
+                    <td>Procesamiento de archivos declarado; verificar precisión de extracción.</td>
+                    <td>Consultas sobre datos; comprobar cálculos e interpretaciones.</td>
+                    <td>Comprobar trazabilidad y controles independientes.</td>
+                </tr>
+                <tr>
+                    <td>BlazeSQL</td>
+                    <td>Orientada a bases de datos; documentos no estructurados requieren preparación.</td>
+                    <td>Generación y ejecución de SQL; revisar las consultas.</td>
+                    <td>La consulta es inspeccionable; auditoría integral requiere controles adicionales.</td>
+                </tr>
+                <tr>
+                    <td>ChatGPT</td>
+                    <td>Analiza documentos y archivos; PDF escaneados pueden presentar límites de extracción.</td>
+                    <td>Ejecución de Python y producción de resultados computacionales.</td>
+                    <td>Conservar evidencia; verificación independiente sigue siendo necesaria.</td>
+                </tr>
+                <tr>
+                    <td>Claude</td>
+                    <td>Analiza PDF y contenido visual; desempeño sujeto a validación.</td>
+                    <td>Ejecución de código y análisis computacional.</td>
+                    <td>Comprobar trazabilidad y reproducibilidad según modalidad y proceso.</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="table-note">
+                <span class="legend">
+                    <i></i> Capacidad descrita en el ensayo
+                </span>
+                <span class="legend pending">
+                    <i></i> Pendiente de validación específica
+                </span>
+                <span class="legend focus">
+                    <i></i> Requiere evaluar configuración o controles
+                </span>
+            </div>
+        </div>
+        <div class="insight">
+            <article class="insight-panel">
+                <h3>¿Qué significa auditar?</h3>
+                <p>Una segunda IA no garantiza independencia: puede repetir el mismo error si usa la misma extracción o
+                    una definición equivocada. Una verificación sólida vuelve a la evidencia original y emplea controles
+                    capaces de detectar discrepancias.
+                </p>
+            </article>
+            <article class="insight-panel dark"><h3>Capas de control propuestas</h3>
+                <p>La investigación plantea que la confiabilidad se construya durante todo el proceso, desde la entrada
+                    del documento hasta la revisión humana.
+                </p>
+                <div class="layers">
+                    <div class="layer"><b>01 · Entrada</b>
+                        <span>Preservar archivos y versiones</span>
+                    </div>
+                    <div class="layer"><b>02 · Extracción</b>
+                        <span>Contrastar texto, tablas y contexto</span>
+                    </div>
+                    <div class="layer"><b>03 · Cálculo</b>
+                        <span>Repetir operaciones y consultas</span>
+                    </div>
+                    <div class="layer"><b>04 · Evidencia</b>
+                        <span>Vincular afirmaciones con fuentes</span>
+                    </div>
+                    <div class="layer"><b>05 · Revisión</b>
+                        <span>Verificación independiente y humana</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="section" id="hallazgos">
+        <div class="section-heading">
+            <div class="kicker">07 / Próxima fase</div>
+            <div><h2>Cómo poner a prueba la comparación</h2>
+                <p class="section-intro">La propuesta experimental del ensayo sugiere un conjunto común de documentos
+                    con datos de referencia y errores deliberados.</p>
+            </div>
+        </div>
+        <div class="test-grid">
+            <div class="test-list">
+                <div class="test-item">
+                    <strong>PDF financiero</strong>
+                    <span>Fuentes y referencias de cifras</span>
+                </div>
+                <div class="test-item">
+                    <strong>PDF escaneado</strong>
+                    <span>Precisión de OCR y extracción</span>
+                </div>
+                <div class="test-item">
+                    <strong>Libro de ventas</strong>
+                    <span>Integridad y cálculos</span>
+                </div>
+                <div class="test-item">
+                    <strong>Tabla CSV</strong>
+                    <span>Estadística y anomalías</span>
+                </div>
+                <div class="test-item">
+                    <strong>Informe narrativo</strong>
+                    <span>Hechos frente a inferencias</span>
+                </div>
+                <div class="test-item">
+                    <strong>Base SQL de prueba</strong>
+                    <span>Consultas y reglas de negocio</span>
+                </div>
+            </div>
+            <div>
+                <h3 style="font:27px var(--serif);margin:0 0 13px">Indicadores comparables</h3>
+                <p style="color:var(--muted);font-size:14px;margin-top:0">Antes de ejecutar pruebas, conviene definir
+                    las métricas y sus criterios de aceptación. El ensayo propone medir:
+                </p>
+                <div class="pill-row">
+                    <span class="pill">Precisión de extracción</span>
+                    <span class="pill">Cobertura</span>
+                    <span class="pill">Exactitud numérica</span>
+                    <span class="pill">Trazabilidad</span>
+                    <span class="pill">Detección de errores</span>
+                    <span class="pill">Reproducibilidad</span>
+                    <span class="pill">Calidad de conclusiones</span>
+                    <span class="pill">Integridad de auditoría</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="conclusion">
+            <div>
+                <div class="eyebrow">08 / Conclusión</div>
+                <h2>La confianza necesita evidencia.</h2>
+            </div>
+            <div>
+                <p class="thesis">La confiabilidad de una herramienta de IA no depende solo de que genere una
+                respuesta, sino de que sea posible demostrar de dónde procede, cómo se calculó y qué controles permiten
+                detectar errores.
+            </p>
+                <p>La ingestión, el análisis y la auditoría forman un mismo proceso. La selección adecuada depende del
+                    tipo de archivo, el riesgo y el uso previsto. Para afirmar que una solución es más confiable, hacen
+                    falta criterios explícitos, pruebas reproducibles y verificación independiente.
+                </p>
+                <p>La prevención de alucinaciones se aborda así como un problema de arquitectura y gobernanza: preservar
+                    la evidencia, validar la extracción, repetir los cálculos y revisar las conclusiones.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="fuentes">
+        <div class="section-heading">
+            <div class="kicker">09 / Bibliografía</div>
+            <div><h2>Fuentes para profundizar</h2>
+                <p class="section-intro">Selección de documentación oficial e institucional citada en el ensayo. Las
+                    fuentes de proveedores describen capacidades declaradas; no sustituyen evaluaciones
+                    independientes.
+                </p>
+            </div>
+        </div>
+        <div class="refs">
+            <details>
+                <summary>Energent.ai · producto y metodología</summary>
+                <div class="ref-body">
+                    <p>Energent.ai. (s. f.).
+                        <em>About the company</em>;
+                        <em>AI data analysis for business files</em>;
+                        <em>How to audit AI-generated work</em>.
+                    </p>
+                    <a href="https://www.energent.ai/en/company">Company</a> ·
+                    <a href="https://www.energent.ai/data-analytics">Data analytics</a> ·
+                    <a href="https://www.energent.ai/ugc/en/article/how-to-audit-ai-generated-work">
+                        Auditoría de trabajo generado por IA</a>
+                </div>
+            </details>
+            <details>
+                <summary>Julius AI · análisis de datos</summary>
+                <div class="ref-body">
+                    <p>Julius AI. (s. f.).
+                        <em>AI for data analysis</em> y
+                        <em>Enterprise AI tools</em>.
+                    </p>
+                    <a href="https://julius.ai/home/ai-for-data-analysis">AI for data analysis</a> ·
+                    <a href="https://julius.ai/enterprise">Enterprise</a>
+                </div>
+            </details>
+            <details>
+                <summary>Tableau · Pulse y capa de confianza</summary>
+                <div class="ref-body">
+                    <p>Tableau y Salesforce. Documentación de producto y ayuda técnica sobre Pulse,
+                    Einstein Trust Layer y Tableau.</p>
+                    <a href="https://www.tableau.com/es-mx/products/tableau-pulse">Tableau Pulse</a> ·
+                    <a href="https://help.tableau.com/current/tableau/en-us/tableau_gai_einstein_trust_layer.htm">Einstein Trust Layer</a> ·
+                    <a href="https://www.tableau.com/why-tableau/what-is-tableau">What is Tableau?</a>
+                </div>
+            </details>
+            <details>
+                <summary>Powerdrill AI · archivos y funciones</summary>
+                <div class="ref-body">
+                    <p>
+                        Powerdrill AI. (s. f.). Documentación de chatbot para archivos, funciones y conversión de PDF a Excel.
+                    </p>
+                    <a href="https://powerdrill.ai/es/features/ai-chatbot">AI chatbot</a>·
+                    <a href="https://powerdrill.ai/es/features">Funciones</a> ·
+                    <a href="https://powerdrill.ai/es/features/convert-pdf-to-excel">PDF a Excel</a>
+                </div>
+            </details>
+            <details>
+                <summary>BlazeSQL · producto y privacidad</summary>
+                <div class="ref-body">
+                    <p>BlazeSQL. (s. f.).
+                        <em>BlazeSQL AI</em>. Política de privacidad (2026).
+                    </p>
+                    <a href="https://www.blazesql.com/">BlazeSQL AI</a> ·
+                    <a href="https://www.blazesql.com/privacy.html">Privacy policy</a>
+                </div>
+            </details>
+            <details>
+                <summary>OpenAI · análisis de datos con ChatGPT</summary>
+                <div class="ref-body">
+                    <p>OpenAI. Documentación de ayuda y material de OpenAI Academy sobre análisis de
+                    datos.</p>
+                    <a href="https://help.openai.com/es-419/articles/8437071-data-analysis-with-chatgpt">Análisis
+                    de datos con ChatGPT</a> ·
+                    <a href="https://openai.com/academy/data-analysis/">OpenAI Academy</a>
+                </div>
+            </details>
+            <details>
+                <summary>Anthropic · documentos y ejecución de código</summary>
+                <div class="ref-body">
+                    <p>Anthropic. Documentación de Claude sobre ejecución de código, soporte de PDF y
+                    creación de archivos.</p>
+                    <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool">Code
+                    execution tool</a> ·
+                    <a href="https://docs.anthropic.com/es/docs/build-with-claude/pdf-support">PDF
+                    support</a> ·
+                    <a href="https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude">Create
+                    and edit files</a>
+                </div>
+            </details>
+            <details>
+                <summary>NIST · gestión de riesgos de IA</summary>
+                <div class="ref-body"><p>Autio, C., et al. (2024).
+                    <em>Artificial intelligence risk management
+                    framework: Generative artificial intelligence profile</em> (NIST AI 600-1).</p>
+                    <a href="https://doi.org/10.6028/NIST.AI.600-1">https://doi.org/10.6028/NIST.AI.600-1</a>
+                    <p>National Institute of Standards and Technology. (2023).
+                        <em>Artificial intelligence risk
+                        management framework (AI RMF 1.0)</em> (NIST AI 100-1).</p>
+                    <a href="https://doi.org/10.6028/NIST.AI.100-1">https://doi.org/10.6028/NIST.AI.100-1</a>
+                </div>
+            </details>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-inner">
+        <div><strong>IA bajo evidencia</strong>
+            <br>Investigación comparativa sobre análisis documental, datos y
+            auditoría.
+        </div>
+        <div>Contenido sintetizado a partir del ensayo proporcionado · 2026</div>
+        <a class="backtop" href="#inicio">Volver arriba ↑</a>
+    </div>
+</footer>
+</body>
+</html>
