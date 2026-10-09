@@ -137,7 +137,7 @@ const translations = {
         "project3.meta": "Research · Documentary · Participation",
         "project3.title": "Comparative analysis of artificial intelligence tools",
         "project3.description": "Research into the incorporation of artificial intelligence (AI) tools into information analysis processes has transformed the way organizations process documents, interpret data, and generate conclusions for decision-making.",
-        "project3.status": "● OPEN RESEARCH · DATA COLLECTION",
+        "project3.status": "● WEB PUBLICATION · 2026",
         "project3.action": "EXPLORE →",
 
         "project4.meta": "Essay · Finance · Quantitative Analysis",
