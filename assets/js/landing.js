@@ -40,7 +40,7 @@ const translations = {
         "project2.status": "● EN DESARROLLO · VALIDACIÓN INTERDISCIPLINARIA",
         "project2.action": "REVISAR →",
 
-        "project3.meta": "Investigación · Documental · Participación",
+        "project3.meta": "Investigación · Ingeniería · Trabajo · IA",
         "project3.title": "Análisis comparativo de herramientas de inteligencia artificial",
         "project3.description": "Investigación sobre La incorporación de herramientas de inteligencia artificial (IA) en los procesos de análisis de información transformado la manera en que las organizaciones procesan documentos, interpretan datos y generan conclusiones para la toma de decisiones.",
         "project3.status": "● PUBLICACIÓN WEB · 2026",
@@ -134,7 +134,7 @@ const translations = {
         "project2.status": "● IN DEVELOPMENT · INTERDISCIPLINARY VALIDATION",
         "project2.action": "REVIEW →",
 
-        "project3.meta": "Research · Documentary · Participation",
+        "project3.meta": "Research · Engineering · Work · AI",
         "project3.title": "Comparative analysis of artificial intelligence tools",
         "project3.description": "Research into the incorporation of artificial intelligence (AI) tools into information analysis processes has transformed the way organizations process documents, interpret data, and generate conclusions for decision-making.",
         "project3.status": "● WEB PUBLICATION · 2026",
