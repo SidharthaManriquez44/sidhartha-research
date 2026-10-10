@@ -93,28 +93,82 @@ const translations = {
     "06 / Síntesis": "06 / Summary",
     "Matriz de capacidades": "Capability matrix",
     "Resumen cualitativo del análisis del ensayo. La clasificación describe el alcance documentado y señala dónde el desempeño debe comprobarse con pruebas específicas.": "A qualitative summary of the essay. The classification describes documented capabilities and highlights where performance needs specific testing.",
+    // Encabezados
     "Herramienta": "Tool",
-    "Fuentes heterogéneas declaradas; precisión pendiente de validación independiente.": "Diverse sources declared; accuracy awaits independent validation.",
-    "Enfoque de análisis publicado; comprobar reproducibilidad.": "Published analytical approach; reproducibility should be checked.",
-    "Publica una metodología; evaluar independencia en la práctica.": "Publishes a methodology; independence should be assessed in practice.",
-    "Archivos y hojas de cálculo documentados; probar extracción compleja.": "Files and spreadsheets documented; test complex extraction.",
-    "Análisis conversacional; añadir controles de validación.": "Conversational analysis; add validation checks.",
-    "No presumir auditoría integral sin verificar funciones concretas.": "Do not assume comprehensive auditing without verifying specific features.",
-    "Fuentes analíticas y métricas gobernadas; no es una herramienta generalista de OCR.": "Governed analytics sources and metrics; not a general-purpose OCR tool.",
-    "Análisis de métricas y explicaciones contextualizadas.": "Metrics analysis and contextualized explanations.",
-    "Evaluar configuración y reconstrucción independiente.": "Assess configuration and independent reconstruction.",
-    "Procesamiento de archivos declarado; verificar precisión de extracción.": "File processing declared; verify extraction accuracy.",
-    "Consultas sobre datos; comprobar cálculos e interpretaciones.": "Data queries; check calculations and interpretations.",
-    "Comprobar trazabilidad y controles independientes.": "Check traceability and independent controls.",
-    "Orientada a bases de datos; documentos no estructurados requieren preparación.": "Database-focused; unstructured documents require preparation.",
-    "Generación y ejecución de SQL; revisar las consultas.": "SQL generation and execution; review the queries.",
-    "La consulta es inspeccionable; auditoría integral requiere controles adicionales.": "Queries can be inspected; comprehensive auditing needs additional checks.",
-    "Analiza documentos y archivos; PDF escaneados pueden presentar límites de extracción.": "Analyzes documents and files; scanned PDFs may have extraction limitations.",
-    "Ejecución de Python y producción de resultados computacionales.": "Python execution and computational results.",
-    "Conservar evidencia; verificación independiente sigue siendo necesaria.": "Retain evidence; independent verification is still necessary.",
-    "Analiza PDF y contenido visual; desempeño sujeto a validación.": "Analyzes PDFs and visual content; performance remains to be validated.",
-    "Ejecución de código y análisis computacional.": "Code execution and computational analysis.",
-    "Comprobar trazabilidad y reproducibilidad según modalidad y proceso.": "Check traceability and reproducibility for the chosen mode and process.",
+    "Capacidad de Ingestión": "Ingestion Capability",
+    "Capacidad de análisis": "Analytical Capability",
+    "Capacidad de auditoría": "Auditability",
+
+    // Energent.ai
+    "Procesamiento de fuentes heterogéneas declarado por el proveedor; precisión pendiente de validación independiente.":
+        "Heterogeneous source processing claimed by the vendor; accuracy awaits independent validation.",
+
+    "Análisis de datos y enfoque de verificación publicado; requiere comprobar la reproducibilidad.":
+        "Data analysis and a published verification approach; reproducibility requires further testing.",
+
+    "Publica una metodología de auditoría; la independencia efectiva debe evaluarse.":
+        "Publishes an audit methodology; its actual independence must be assessed.",
+
+    // Julius AI
+    "Análisis de archivos y hojas de cálculo documentado; extracción compleja pendiente de pruebas específicas.":
+        "File and spreadsheet analysis is documented; complex data extraction requires specific testing.",
+
+    "Análisis conversacional y generación de resultados; requiere controles adicionales de validación.":
+        "Conversational analysis and result generation; additional validation controls are required.",
+
+    "No debe presumirse una auditoría independiente integral sin verificar las funciones concretas.":
+        "Comprehensive independent auditing should not be assumed without verifying the specific features.",
+
+    // Tableau Pulse
+    "Centrada en fuentes analíticas y métricas gobernadas; no es una herramienta generalista de OCR.":
+        "Focused on governed analytical data sources and metrics; it is not a general-purpose OCR tool.",
+
+    "Análisis de métricas y explicaciones contextualizadas.":
+        "Metric analysis and contextualized explanations.",
+
+    "Dispone de mecanismos de gobernanza y registros según la configuración; requiere evaluar la reconstrucción independiente de resultados.":
+        "Governance mechanisms and logs are available depending on the configuration; independent reconstruction of results must be assessed.",
+
+    // Powerdrill AI
+    "Procesamiento y transformación de archivos declarado por el proveedor; precisión pendiente de validación.":
+        "File processing and transformation claimed by the vendor; accuracy awaits validation.",
+
+    "Análisis conversacional y operaciones sobre datos; requiere verificar cálculos e interpretaciones.":
+        "Conversational analysis and data operations; calculations and interpretations must be verified.",
+
+    "Debe comprobarse la trazabilidad de las fuentes y la existencia de mecanismos independientes.":
+        "Source traceability and the existence of independent verification mechanisms must be checked.",
+
+    // BlazeSQL
+    "Orientada a bases de datos; los documentos no estructurados requieren normalmente una etapa previa de extracción.":
+        "Database-oriented; unstructured documents generally require a prior data extraction stage.",
+
+    "Generación y ejecución de SQL, con posibilidad de inspeccionar las consultas.":
+        "SQL generation and execution, with the ability to inspect queries.",
+
+    "Las consultas pueden revisarse, pero una auditoría integral requiere controles adicionales.":
+        "Queries can be reviewed, but a comprehensive audit requires additional controls.",
+
+    // ChatGPT
+    "Análisis de archivos y documentos; los archivos escaneados pueden presentar limitaciones de extracción.":
+        "File and document analysis; scanned files may present extraction limitations.",
+
+    "Ejecución de Python y producción de resultados computacionales reproducibles.":
+        "Python execution and the production of reproducible computational results.",
+
+    "Permite conservar evidencias del análisis, pero la auditoría independiente requiere controles adicionales.":
+        "Analysis evidence can be retained, but independent auditing requires additional controls.",
+
+    // Claude
+    "Análisis de documentos PDF y contenido visual, sujeto a validación.":
+        "PDF document and visual content analysis, subject to validation.",
+
+    "Ejecución de código y análisis computacional mediante las herramientas disponibles.":
+        "Code execution and computational analysis using the available tools.",
+
+    "La trazabilidad y la reproducibilidad deben comprobarse según la modalidad y el procedimiento utilizado.":
+        "Traceability and reproducibility must be verified according to the mode and procedure used.",
+
     "Capacidad descrita en el ensayo": "Capability described in the essay",
     "Pendiente de validación específica": "Specific validation pending",
     "Requiere evaluar configuración o controles": "Configuration or controls need assessment",
