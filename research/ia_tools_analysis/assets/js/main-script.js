@@ -182,7 +182,7 @@ const translations = {
     "Anthropic. Documentación de Claude sobre ejecución de código, soporte de PDF y creación de archivos.": "Anthropic. Claude documentation on code execution, PDF support, and file creation.",
     "y": "and",
     "Investigación comparativa sobre análisis documental, datos y auditoría.": "Comparative research on document analysis, data, and auditing.",
-    "Contenido sintetizado a partir del ensayo proporcionado · 2026": "Content synthesized from the provided essay · 2026",
+    "Investigation realizada por Sidhartha - Research · 2026": "Investigation by Sidhartha - Research · 2026",
     "Volver arriba ↑": "Back to top ↑",
     "IA bajo evidencia | Investigación sobre análisis documental": "AI under scrutiny | Research on document analysis"
 };
@@ -214,3 +214,16 @@ function setLanguage(language) {
 }
 
 toggle.addEventListener('click', () => setLanguage(document.documentElement.lang === 'es' ? 'en' : 'es'));
+
+document.querySelector(".backtop")?.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  window.scrollTo({
+    top: 0,
+    behavior: reduceMotion ? "auto" : "smooth"
+  });
+});
