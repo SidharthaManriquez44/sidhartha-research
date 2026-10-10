@@ -43,7 +43,7 @@ const translations = {
         "project3.meta": "Investigación · Documental · Participación",
         "project3.title": "Análisis comparativo de herramientas de inteligencia artificial",
         "project3.description": "Investigación sobre La incorporación de herramientas de inteligencia artificial (IA) en los procesos de análisis de información transformado la manera en que las organizaciones procesan documentos, interpretan datos y generan conclusiones para la toma de decisiones.",
-        "project3.status": "● WEB PUBLICATION · 2026",
+        "project3.status": "● PUBLICACIÓN WEB · 2026",
         "project3.action": "EXPLORAR →",
 
         "project4.meta": "Ensayo · Finanzas · Análisis cuantitativo",
