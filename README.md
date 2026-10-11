@@ -1,10 +1,13 @@
 # Sidhartha Research
-
 ### Investigación · Ingeniería · Modelado · Datos
 
 [![Website](https://img.shields.io/badge/Website-sidhartha--research.com-1656a6?style=flat-square)](https://sidhartha-research.com/)
 [![GitHub Pages](https://img.shields.io/badge/Published%20with-GitHub%20Pages-071321?style=flat-square)](https://pages.github.com/)
 [![Status](https://img.shields.io/badge/Status-Active-0b9eb8?style=flat-square)](https://sidhartha-research.com/)
+
+<p align="right">
+  <a href="README.md">🇪🇸 Español</a> · <a href="README.en.md">🇬🇧 English</a>
+</p>
 
 **Sidhartha Research** es una plataforma personal de investigación orientada al estudio de problemas complejos mediante ingeniería, datos, modelado, simulación, análisis cuantitativo y colaboración interdisciplinaria.
 
@@ -63,7 +66,8 @@ La publicación integra investigación, evidencia, análisis cuantitativo, visua
 
 Publicación:
 
-https://sidhartha-research.com/research/employment_trends/
+
+🔗 **[Ingeniería & Futuro del Trabajo](https://sidhartha-research.com/research/employment_trends/)**
 
 
 ### 02 · Simulación de un Departamento de Emergencias
@@ -74,17 +78,23 @@ El trabajo busca representar procesos operativos, recursos, flujo de pacientes y
 
 Estado: En desarrollo.
 
-Repositorio:
+Publicación:
 
-https://github.com/SidharthaManriquez44/hospital-simulation
+🔗 **[Simulación de un Departamento de Urgencias](https://sidhartha-research.com/projects/emergency-simulation/emergency_simulation/frontend/index.html)**
 
-### 03 · Entre Cempasúchil y Calabazas
-Investigación · Sociedad · Cultura · Participación
+### 03 · Análisis comparativo de herramientas de inteligencia artificial
+Investigación · Ingeniería · Trabajo · IA
 
-Trabajo de investigación orientado al estudio de prácticas, significados y transformaciones relacionadas con tradiciones culturales.
-El proyecto contempla una dimensión documental y participativa, así como la recolección y análisis de evidencia mediante investigación de campo.
+Investigación sobre La incorporación de herramientas de inteligencia artificial 
+(IA) en los procesos de análisis de información transformado la manera en que 
+las organizaciones procesan documentos, interpretan datos y generan conclusiones 
+para la toma de decisiones.
 
-Estado: Investigación abierta · Recolección de datos.
+Estado: Investigación · Recolección de datos.
+
+Publicación:
+
+🔗 **[Comparativo de IA](https://sidhartha-research.com/research/ia_tools_analysis/index.html)**
 
 ### 04 · Hedge Fund
 Finanzas · Datos · Análisis cuantitativo · Experimentación
