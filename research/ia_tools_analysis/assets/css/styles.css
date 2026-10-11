@@ -649,6 +649,7 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
     min-width: 740px;
     font-size: 13px;
 }
