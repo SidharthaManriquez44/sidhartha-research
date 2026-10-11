@@ -49,7 +49,7 @@ A computational system may need validation by specialists in the domain it repre
 For this reason, the work published here aims to make the different layers of the research process visible:
 
 <p align="center">
-  <img src="assets/images/research_process.png" alt="Research methodology" width="800">
+  <img src="assets/images/problem_to_knowledge.png" alt="Research methodology" width="800">
 </p>
 
 Not every project follows exactly the same stages. The methodology is adapted to the problem, the available evidence, and the project's stage of development.
