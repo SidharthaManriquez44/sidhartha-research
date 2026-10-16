@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17243A">
+    <meta name="description"
+          content="Simulación sobre decisiones de capacidad operativa bajo incertidumbre:
+          árbol de decisión, punto de equilibrio y simulación Monte Carlo para un caso hipotético
+          de Aeroméxico.">
+    <title>Decisiones de capacidad | Aeroméxico</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script src="assets/js/main-script.js" defer></script>
+</head>
+<body>
+<header class="hero" id="inicio">
+    <nav class="nav wrap" aria-label="Navegación principal">
+        <a class="brand"
+           href="#inicio"
+           style="text-decoration:none">
+            <span class="brand-mark">↗</span>
+            <span>Decisión · Aeroméxico</span>
+        </a>
+        <div class="navlinks">
+            <a href="#modelo">Modelo</a>
+            <a href="#resultados">Resultados</a>
+            <a href="#simulacion">Monte Carlo</a>
+            <a href="#alcance">Alcance</a>
+            <div class="language-switch" role="group" aria-label="Idioma / Language">
+                <button type="button" data-lang="es" aria-pressed="true">ES</button>
+                <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+        </div>
+    </nav>
+    <div class="wrap hero-grid">
+        <div>
+            <div class="eyebrow">Simulación · análisis de decisiones para negocio</div>
+            <h1>¿Cuánta capacidad <em>conviene</em> ofrecer?</h1>
+            <p class="hero-lede">
+                Un caso cuantitativo para comparar tres estrategias de capacidad aérea cuando la
+                demanda, los ingresos y los costos todavía son inciertos.
+            </p>
+            <div class="hero-meta">
+                <div><strong>Sidhartha Manríquez</strong>Autor</div>
+                <div><strong>Modelo aplicado</strong>Escenarios + punto de equilibrio</div>
+                <div><strong>Caso de análisis</strong>Ruta hipotética · MXN</div>
+            </div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración abstracta de una ruta aérea entre dos puntos">
+            <div class="gridlines"></div>
+            <div class="hero-stamp">decidir<br>con<br>incertidumbre</div>
+            <svg class="route" viewBox="0 0 460 330" role="img" aria-label="Trayectoria de vuelo ilustrativa">
+                <path class="orbit" d="M48 258 C116 68 286 62 402 118"/>
+                <path class="orbit" d="M48 258 C156 176 267 156 402 118" opacity=".4"/>
+                <circle class="point" cx="48" cy="258" r="7"/>
+                <circle class="point" cx="402" cy="118" r="7"/>
+                <g transform="translate(239 111) rotate(-17)">
+                    <path class="plane"
+                          d="M0-17 4-3 26 5 26 10 4 6 4 20 11 24 11 28 0 25-11 28-11 24-4 20-4 6-26 10-26 5-4-3Z"/>
+                </g>
+            </svg>
+            <span class="art-label one">demanda</span>
+            <span class="art-label two">capacidad</span>
+            <span class="art-note">Representación conceptual</span>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="section" id="pregunta">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="kicker">01 / La decisión</div>
+                <div>
+                    <h2>El reto no es llenar el avión. Es equilibrar ingreso y exposición.</h2>
+                    <p class="intro">
+                        Una capacidad pequeña puede dejar pasajeros sin atender; una grande exige costos
+                        que quizá no se recuperen. El análisis compara alternativas mediante rentabilidad esperada,
+                        punto de equilibrio y riesgo económico.
+                    </p>
+                </div>
+            </div>
+            <div class="question">
+                <div>
+                    <span class="small-label">Pregunta central</span>
+                    <p>
+                        ¿Qué estrategia ofrece una relación favorable entre utilidad esperada y riesgo, bajo distintos
+                        niveles de demanda y costos?
+                    </p>
+                </div>
+                <div><span class="small-label">Alcance del caso</span>
+                    <p>
+                        Una operación equivalente en una ruta ficticia. Los datos y resultados son hipotéticos; no
+                        describen el desempeño real de Aeroméxico.
+                    </p>
+                </div>
+            </div>
+            <div class="alternatives" aria-label="Alternativas de capacidad evaluadas">
+                <article class="alt">
+                    <span class="alt-num">A</span>
+                    <h3>Capacidad actual</h3>
+                    <p>Una operación con 120 asientos disponibles.</p>
+                    <div class="metric">Costo base: $180,000 MXN</div>
+                </article>
+                <article class="alt"><span class="alt-num">B</span>
+                    <h3>Mayor frecuencia</h3>
+                    <p>Capacidad agregada equivalente de 180 asientos.</p>
+                    <div class="metric">Costo base: $260,000 MXN</div>
+                </article>
+                <article class="alt">
+                    <span class="alt-num">C</span>
+                    <h3>Mayor aeronave</h3>
+                    <p>Una operación con 240 asientos disponibles.</p>
+                    <div class="metric">Costo base: $350,000 MXN</div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark-section" id="modelo">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="kicker">02 / Método</div>
+                <div>
+                    <h2>Un margen unitario y tres escenarios de demanda.</h2>
+                    <p class="intro">
+                        El árbol de decisión asigna una utilidad a cada combinación de alternativa y
+                        escenario. Las probabilidades ponderan esos resultados para calcular el valor monetario esperado
+                        (VME).
+                    </p>
+                </div>
+            </div>
+            <div class="model-grid">
+                <article class="model-card">
+                    <h3>Utilidad por alternativa</h3>
+                    <p>
+                        Solo se contabiliza la demanda que cabe dentro de la capacidad disponible. El costo operativo se
+                        descuenta por operación equivalente.
+                    </p>
+                    <div class="formula">Uᵢ(D) = (P − CV) × min(D, Kᵢ) − CFᵢ</div>
+                    <div class="data-row">
+                        <span class="chip">Ingreso: $2,500 / pasajero</span>
+                        <span class="chip">Costo variable: $300 / pasajero</span>
+                        <span class="chip">Margen: $2,200</span>
+                    </div>
+                </article>
+                <article class="model-card">
+                    <h3>Escenarios considerados</h3>
+                    <p>Distribución discreta definida para comparar las alternativas con probabilidades compartidas.</p>
+                    <div class="scenario-list">
+                        <div class="scenario">
+                            <span>Baja · 100</span>
+                            <div class="bar">
+                                <i style="width:25%"></i>
+                            </div>
+                            <strong>25%</strong></div>
+                        <div class="scenario"><span>Media · 150</span>
+                            <div class="bar">
+                                <i style="width:50%"></i>
+                            </div>
+                            <strong>50%</strong>
+                        </div>
+                        <div class="scenario">
+                            <span>Alta · 210</span>
+                            <div class="bar">
+                                <i style="width:25%"></i>
+                            </div>
+                            <strong>25%</strong>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="methods-note">
+                <b>Supuesto de comparación.</b> La alternativa B representa capacidad agregada
+                equivalente, no el costo real de incorporar una frecuencia adicional. Los costos están expresados en MXN
+                por operación equivalente.
+            </div>
+        </div>
+    </section>
+
+    <section class="section results" id="resultados">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="kicker">03 / Resultados</div>
+                <div>
+                    <h2>La capacidad actual gana en el escenario base.</h2>
+                    <p class="intro">El resultado depende de las probabilidades, el ingreso por pasajero y los costos
+                        asumidos. Cambiar esos supuestos puede cambiar la alternativa preferible.
+                    </p>
+                </div>
+            </div>
+            <div class="tabs"
+                 role="tablist"
+                 aria-label="Explorar resultados del modelo">
+                <button class="tab" id="tab-vme" role="tab" aria-selected="true" aria-controls="panel-vme">Valor
+                    esperado
+                </button>
+                <button class="tab" id="tab-utility" role="tab" aria-selected="false" aria-controls="panel-utility"
+                        tabindex="-1">Utilidad por escenario
+                </button>
+            </div>
+            <div class="panel" id="panel-vme" role="tabpanel" aria-labelledby="tab-vme">
+                <div class="results-grid">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Alternativa</th>
+                                <th>VME (MXN)</th>
+                                <th>Prob. de pérdida</th>
+                                <th>Mejor utilidad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="winner">
+                                <td>A · Actual</td>
+                                <td>$73,000</td>
+                                <td>0 %</td>
+                                <td>$84,000</td>
+                            </tr>
+                            <tr>
+                                <td>B · Frecuencia</td>
+                                <td>$59,000</td>
+                                <td>25 %</td>
+                                <td>$136,000</td>
+                            </tr>
+                            <tr>
+                                <td>C · Aeronave</td>
+                                <td>−$14,500</td>
+                                <td>75 %</td>
+                                <td>$112,000</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="table-foot">VME y probabilidad de pérdida recalculada de la matriz y sus
+                            probabilidades. El VME_C = +$14,500; al ponderar las utilidades de su matriz
+                            resulta −$14,500 y 75% de probabilidad de pérdida.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="chart"><h3>Valor monetario esperado</h3>
+                            <p>MXN por operación equivalente · árbol de decisión</p>
+                            <div class="bar-item">
+                                <div class="bar-caption">
+                                    <span>A · Capacidad actual</span>
+                                    <strong>$73,000</strong>
+                                </div>
+                                <div class="bar-track">
+                                    <i class="positive" style="width:50%"></i>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-caption">
+                                    <span>B · Mayor frecuencia</span>
+                                    <strong>$59,000</strong>
+                                </div>
+                                <div class="bar-track">
+                                    <i class="positive" style="width:40.4%"></i>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-caption">
+                                    <span>C · Mayor aeronave</span>
+                                    <strong>−$14,500</strong>
+                                </div>
+                                <div class="bar-track">
+                                    <i class="negative" style="width:9.9%"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="takeaway">En este caso, A supera a B por <strong>$14,000 MXN</strong> de utilidad
+                            esperada.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel" id="panel-utility" role="tabpanel" aria-labelledby="tab-utility" hidden>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Alternativa</th>
+                            <th>Demanda baja · 100</th>
+                            <th>Demanda media · 150</th>
+                            <th>Demanda alta · 210</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>A · Actual</td>
+                            <td>$40,000</td>
+                            <td>$84,000</td>
+                            <td>$84,000</td>
+                        </tr>
+                        <tr>
+                            <td>B · Frecuencia</td>
+                            <td>−$40,000</td>
+                            <td>$70,000</td>
+                            <td>$136,000</td>
+                        </tr>
+                        <tr>
+                            <td>C · Aeronave</td>
+                            <td>−$130,000</td>
+                            <td>−$20,000</td>
+                            <td>$112,000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-foot">
+                        La alternativa B obtiene la mayor utilidad con demanda alta. A resulta más
+                        favorable en demanda baja y media.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section breakeven" id="equilibrio">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="kicker">04 / Punto de equilibrio</div>
+                <div>
+                    <h2>Más asientos también elevan el mínimo que hay que vender.</h2>
+                    <p class="intro">Con margen de contribución de $2,200 por pasajero, se calcula la demanda necesaria
+                        para cubrir el costo fijo de cada alternativa.
+                    </p>
+                </div>
+            </div>
+            <div class="formula"
+                 style="background:transparent;border-color:var(--line);color:var(--ink);max-width:420px">Q* = Costo
+                fijo ÷ (Ingreso − Costo variable)
+            </div>
+            <div class="breakeven-cards">
+                <article class="be-card">
+                    <span class="letter">A · Capacidad actual</span>
+                    <div class="number">82</div>
+                    <div class="units">pasajeros para cubrir costos</div>
+                    <div class="occupancy">Ocupación mínima <strong>68.3%</strong>
+                    </div>
+                </article>
+                <article class="be-card">
+                    <span class="letter">B · Mayor frecuencia</span>
+                    <div class="number">119</div>
+                    <div class="units">pasajeros para cubrir costos</div>
+                    <div class="occupancy">Ocupación mínima <strong>66.1%</strong>
+                    </div>
+                </article>
+                <article class="be-card">
+                    <span class="letter">C · Mayor aeronave</span>
+                    <div class="number">160</div>
+                    <div class="units">pasajeros para cubrir costos</div>
+                    <div class="occupancy">Ocupación mínima <strong>66.7%</strong>
+                    </div>
+                </article>
+            </div>
+            <p class="be-note">
+                Los pasajeros se redondean al entero siguiente. Las ocupaciones mínimas se calculan sobre
+                la capacidad disponible de cada alternativa.
+            </p>
+        </div>
+    </section>
+
+    <section class="simulation" id="simulacion">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="kicker">05 / Validación en código</div>
+                <div>
+                    <h2>Monte Carlo: cifras reportadas, pendientes de reproducibilidad.</h2>
+                    <p class="intro">
+                        El ensayo también consigna resultados de 10,000 iteraciones con semilla 42. La
+                        sección metodológica posterior describe la simulación como una etapa de implementación
+                        pendiente; por ello, estas cifras se presentan como reportadas en el documento y deben
+                        verificarse en el código enlazado.
+                    </p>
+                    <div class="sim-status"><i></i>
+                        Revisar supuestos y reproducir
+                    </div>
+                </div>
+            </div>
+            <div class="sim-grid">
+                <article class="sim-card"><h3>C · Mayor aeronave</h3>
+                    <div class="big">$141.6 M</div>
+                    <div class="sub">VME aproximado reportado</div>
+                    <span class="risk">6.9% de probabilidad de pérdida</span>
+                </article>
+                <article class="sim-card">
+                    <h3>A · Capacidad actual</h3>
+                    <div class="big">$133.3 M</div>
+                    <div class="sub">VME aproximado reportado</div>
+                    <span class="risk">2.9% de probabilidad de pérdida</span>
+                </article>
+                <article class="sim-card"><h3>B · Mayor frecuencia</h3>
+                    <div class="big">$120.3 M</div>
+                    <div class="sub">VME aproximado reportado</div>
+                    <span class="risk">16.2% de probabilidad de pérdida</span>
+                </article>
+            </div>
+            <div class="sim-caveat">
+                <strong>Nota de consistencia:</strong> el PDF no explica con suficiente detalle el
+                horizonte o escala de estos valores Monte Carlo y, más adelante, señala que la simulación aún queda como
+                implementación posterior. No se comparan directamente con los VME del árbol ($73,000, $59,000 y $14,500
+                por operación): parecen corresponder a escalas o modelos distintos. La conclusión empresarial requiere
+                reproducir la ejecución y revisar sus supuestos.
+            </div>
+            <a class="repo-link" href="https://github.com/SidharthaManriquez44/aeromexico-montecarlo" target="_blank"
+               rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor"
+                          d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.07c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.47-.28-5.07-1.24-5.07-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.43 3.05-1.14 3.05-1.14.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.6 5.24-5.08 5.51.4.35.75 1.03.75 2.08V22c0 .29.2.63.77.52A11.1 11.1 0 0 0 12 .9Z"/>
+                </svg>
+                <span class="repo-label">Validar la simulación en GitHub</span>
+                <span aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="limits" id="alcance">
+        <div class="wrap limits-grid">
+            <div>
+                <div class="kicker">06 / Alcance y límites</div>
+                <h2>Un marco de comparación, no una recomendación de operación.</h2>
+                <p class="limits-copy">
+                    El ejercicio demuestra cómo ordenar una decisión bajo incertidumbre. Su valor
+                    depende de la calidad de los datos y de que el modelo represente las condiciones reales de una
+                    ruta.</p>
+                <a href="assets/images/MTD.pdf"
+                   class="pdf-essay-link"
+                   target="_blank"
+                   rel="noopener"
+                   style="display:inline-block;margin-top:12px;color:var(--paper);font-size:12px;font-weight:700">
+                    Consultar ensayo completo (PDF) ↗
+                </a>
+            </div>
+            <div class="limit-list">
+                <div class="limit-row">
+                    <span class="index">01</span>
+                    <p>
+                        <strong>Escenarios hipotéticos</strong>
+                        No se usaron datos internos de reservaciones, tarifas ni
+                        costos de una ruta real.
+                    </p>
+                </div>
+                <div class="limit-row"><span class="index">02</span>
+                    <p>
+                        <strong>Operación simplificada</strong>
+                        No incorpora red de conexiones, estacionalidad,
+                        competencia, cancelaciones, restricciones de flota o tripulación, mantenimiento, impuestos ni
+                        carga.
+                    </p>
+                </div>
+                <div class="limit-row">
+                    <span class="index">03</span>
+                    <p>
+                        <strong>Distribuciones por validar</strong>
+                        Para interpretar Monte Carlo como evidencia, hay que
+                        revisar las distribuciones y calibrarlas con datos
+                        históricos cuando estén disponibles.
+                    </p>
+                </div>
+                <div class="limit-row">
+                    <span class="index">04</span>
+                    <p>
+                        <strong>Riesgo y juicio directivo</strong>
+                        El VME no representa por sí solo la aversión al riesgo
+                        ni las pérdidas extremas. Una decisión definitiva requiere
+                        criterios adicionales y validación
+                        experta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sources">
+        <div class="wrap">
+            <div class="sources-head"><h2>Fuentes y materiales</h2>
+                <span class="small-label">Consulta y reproducción</span>
+            </div>
+            <div class="source-links">
+                <a href="https://github.com/SidharthaManriquez44/aeromexico-montecarlo"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Manríquez (2026) · Código de simulación Monte Carlo ↗
+                </a>
+                <a href="https://ir.aeromexico.com/es/financieros/reportes-anuales"
+                   target="_blank"
+                   rel="noopener noreferrer">Grupo Aeroméxico · Reportes anuales ↗
+                </a>
+                <a href="https://doi.org/10.1093/iti/liad026" target="_blank" rel="noopener noreferrer">
+                    Xu, Wandelt y Sun (2024) · Airline scheduling optimization ↗
+                </a>
+                <a href="https://www.nist.gov/services-resources/software/monte-carlo-tool"
+                   target="_blank"
+                   rel="noopener noreferrer">NIST (2025) · Monte Carlo tool ↗
+                </a>
+                <a href="https://doi.org/10.1088/1681-7575/aba5aa"
+                   target="_blank" rel="noopener noreferrer">
+                    Jamroz y Williams (2020) · Consistency in Monte Carlo uncertainty analyses ↗</a>
+                <a href="https://www.nist.gov/publications/incorporating-attribute-value-uncertainty-decision-analysis"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Leber y Herrmann (2012) · Uncertainty in decision analysis
+                    ↗
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="wrap">
+        <span>Sidhartha Research · Análisis de decisiones para negocio</span>
+        <span>Todos los valores del caso Aeroméxico son hipotéticos.</span>
+    </div>
+</footer>
+<a class="pdf-float"
+   href="assets/images/MTD.pdf"
+   target="_blank"
+   rel="noopener">
+    <span class="pdf-label">
+        Abrir ensayo PDF
+    </span> ↗
+</a>
+</body>
+</html>

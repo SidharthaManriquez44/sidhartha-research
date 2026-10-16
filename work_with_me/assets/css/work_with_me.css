@@ -1317,7 +1317,7 @@ section[id] {
 
 
 .consulting-project__visual--quant::after {
-    content: "SOURCE → CONTRACT → QUALITY → STORAGE → ANALYSIS";
+    content: "SOURCE → ANALYSIS → SIMULATION → QUALITY CHECK → RESULTS";
 
     position: absolute;
 

@@ -140,10 +140,10 @@ const translations = {
         /* PROJECT 02 */
 
         "project.02.subtitle":
-            "Data platform para investigación cuantitativa y análisis financiero.",
+            "Análisis de decisiones para negocio",
 
         "project.02.description":
-            "Plataforma orientada a la adquisición, validación, transformación y trazabilidad de información financiera y macroeconómica para construir análisis reproducibles.",
+            " Un caso cuantitativo para comparar tres estrategias de capacidad aérea cuando la demanda, los ingresos y los costos todavía son inciertos.",
 
 
         /* PROJECT 03 */
@@ -428,10 +428,10 @@ const translations = {
         /* PROJECT 02 */
 
         "project.02.subtitle":
-            "Data platform for quantitative research and financial analysis.",
+            "Business Decision Analysis.",
 
         "project.02.description":
-            "A platform focused on the acquisition, validation, transformation, and traceability of financial and macroeconomic information to build reproducible analyses.",
+            "Platform designed for the acquisition, validation, transformation, and traceability of financial and macroeconomic data to build reproducible analyses.",
 
 
         /* PROJECT 03 */
